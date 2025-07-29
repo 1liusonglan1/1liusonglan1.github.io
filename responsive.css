@@ -1,0 +1,2264 @@
+/* ------------------------------------------------- Large Screen. 1200 ---------------------------------------------------*/
+ @media (min-width: 1440px) and (max-width: 1600px) {
+     .em_sc_100 {
+         margin-top: 15px;
+    }
+     .em_slider_s2_image_inner img{
+         width:100%;
+    }
+}
+/* ------------------------------------------------- Large Screen. 1200 ---------------------------------------------------*/
+ @media (min-width: 1200px) and (max-width: 1439px) {
+     .text-left .em_slider_s2_content {
+         margin-right: 10%;
+    }
+     .text-right .em_slider_s2_content {
+         margin-left: 10%;
+    }
+     .em-slider-sub-title {
+         line-height: 64px;
+    }
+     .em_sc_100 {
+         margin-top: 15px;
+    }
+     .em_slider_s2_image_inner img{
+         width:100%;
+    }
+     .text-right .witr_slider_thumb {
+         left: 0px;
+    }
+     .text-left .witr_slider_thumb {
+         right: -150px;
+    }
+     .em_slider_s2_image img {
+         width: 70%;
+    }
+     .liton_menu > ul > li > a {
+         margin: 38px 9px 38px;
+         font-size: 19px;
+    }
+     .text-left .witrscontainer h1, .text-left .witrscontainer h2, .text-left .witrscontainer h3, .text-left .witr_slicks_title h4, .text-left .witrscontainer p {
+         width: 51%;
+    }
+     .text-right .witrscontainer h1, .text-right .witrscontainer h2, .text-right .witrscontainer h3, .text-right .witr_slicks_title h4, .text-right .witrscontainer p {
+         width: 51%;
+    }
+}
+/* ------------------------------------------------- Old Desktop :1365-1660 ---------------------------------------------------*/
+ @media (min-width: 1365px) and (max-width: 1660px) {
+     .liton_nav_area, .liton-header-top {
+         padding-right: 50px !important;
+         padding-left: 50px !important;
+    }
+	.witr_ds_content_inner {
+		width: 88%;
+	}
+	#scrollUp {
+		right: 90px;
+		bottom: 77px;
+	}
+	.footer-bottom:before {
+		width: 86%;
+	}
+    /* swiper slider */
+     .witr_swiper_area .text-right .witr_slider_thumb {
+         left: -95px !important;
+    }
+     .witr_swiper_area .text-left .witr_slider_thumb {
+         right: -95px !important;
+    }
+     .witr_swiper_height {
+         width: 100% !important;
+    }
+     .w_slider_3 .witr_swiper_height {
+         width: 100% !important;
+         transform: translateX(-50%) !important;
+         left: 15%;
+    }
+	
+	.witr_sw_text_area {
+		width: 87%;
+	}
+	
+	
+	
+	
+	
+}
+/* ------------------------------------------------- Large Screen. 1024 ---------------------------------------------------*/
+ @media (min-width: 1024px) and (max-width: 1600px) {
+     .em-nivo-slider-wrapper:hover .nivo-directionNav a {
+         left: 5px;
+    }
+     .em-nivo-slider-wrapper:hover .nivo-directionNav .nivo-nextNav {
+         right: 5px;
+    }
+    /* banner area css */
+     .witr_banner_content.text-right {
+         margin-right: 20px;
+    }
+     .witr_banner_content p {
+         width: 60%;
+    }
+     .em_slider_social {
+         top: 45%;
+    }
+}
+/* ------------------------------------------------- Laptop Screen 1366 ---------------------------------------------------*/
+ @media (min-width: 1170px) and (max-width: 1366px) {
+     .em_creative_header:after {
+         -webkit-transform: rotate(-114deg);
+         transform: rotate(-114deg);
+    }
+     .creative_header_address {
+         padding-left: 0;
+    }
+    /* banner area css */
+     .witr_banner_content p {
+         width: 70%;
+    }
+}
+
+/* ------------------------------------------------- Old Desktop :992 ---------------------------------------------------*/
+ @media (min-width: 992px) and (max-width: 1364px) {
+     .witr_b9{
+         margin-top: 100px;
+    }
+}
+/* ------------------------------------------------- Old Desktop :992 ---------------------------------------------------*/
+ @media (min-width: 992px) and (max-width: 1199px) {
+     .liton_nav_area, .liton-header-top {
+         padding-right: 50px !important;
+         padding-left: 50px !important;
+    }
+     .em_creative_header::before {
+         width: 19%;
+    }
+     .em_creative_header::after {
+         display: none;
+    }
+    /* swiper slider */
+	
+		.witr_sw_text_area {
+			width: 88%;
+		}
+		.about_page_area_about .all_color_service {
+		padding: 23px 13px 40px;
+		margin: 15px 6px 10px;
+	}
+	.home2_swiper_area .witr_swiper_height {
+		background-position: center left;
+		background-size: cover;
+	}
+     .witr_swiper_height {
+         width: 100% !important;
+    }
+     .witr_swiper_content h2, .witr_swiper_content h3 {
+         font-size: 55px;
+    }
+     .w_slider_4 .witr_swiper_height {
+         margin-left:0px !important;
+    }
+     .d1.witr_swiper_height {
+         width: 100% !important;
+    }
+     .w_slider_3 .d1.witr_swiper_height {
+         width: 100% !important;
+         transform: translateX(0) !important;
+    }
+     .d2.witr_swiper_height {
+         width: 50% !important;
+    }
+     .witr_swiper_area .text-right .witr_slider_thumb {
+         left: -230px !important;
+    }
+     .witr_swiper_area .text-left .witr_slider_thumb {
+         right: -150px !important;
+    }
+	/* nivo slider */
+     .em-slider-title {
+         font-size: 26px;
+         margin-bottom: 10px;
+    }
+     .em-slider-sub-title {
+         font-size: 42px;
+         margin-bottom: 2px;
+    }
+     .em-slider-descript {
+         margin-bottom: 20px;
+         width: 66%;
+    }
+     .text-left .em_slider_s2_content {
+         margin-right: 10%;
+    }
+     .text-right .em_slider_s2_content {
+         margin-left: 10%;
+    }
+     .em-slider-sub-title {
+         line-height: 49px;
+    }
+     .em_sc_100 {
+         margin-top: 15px;
+    }
+     .em_slider_s2_image_inner img{
+         width:100%;
+    }
+	.recent-post-text h4 a {
+		font-size: 17px;
+	}
+    /*========= banner area css ========*/
+     .witr_banner_content h2 {
+         font-size: 50px;
+    }
+     .witr_banner_content p {
+         width: 85%;
+    }
+     .witr_banner_content.text-right {
+         margin-right: 20px;
+    }
+    /*======== banner_area 2 ==========*/
+     .banner_area {
+         position: relative;
+         height: 600px;
+    } 
+	/*======== Slick ==========*/
+	.witr_ds_content_inner {
+		width: 87%;
+	}
+	.witr_ds_content_inner h2 {
+		font-size: 65px;
+	}
+    /*========== height css ===========*/
+     .menu-height-space {
+         height: 0;
+    }
+     .em_creative_header:after {
+         -webkit-transform: rotate(-100deg);
+         transform: rotate(-100deg);
+    }
+     .liton_menu > ul > li > a {
+         margin: 38px 5px 38px;
+         font-size: 13px;
+    }
+     .liton_menu > ul > li > a {
+         margin: 38px 15px 38px;
+         font-size: 13px;
+    }
+     .witr_h_h8 .liton_menu > ul > li > a, .witr_h_h15 .liton_menu > ul > li > a, .witr_h_h16 .liton_menu > ul > li > a {
+         margin: 38px 11px 38px;
+    }
+     a.dtbtn {
+         font-size: 14px;
+         margin-left: 10px;
+         padding: 10px 20px;
+    }
+     .witr_h_h10 .liton_menu > ul > li > a, .witr_h_h11 .liton_menu > ul > li > a, .witr_h_h9 .liton_menu > ul > li > a, .witr_h_h17 .liton_menu > ul > li > a{
+         margin: 38px 6px 38px;
+         font-size: 17px;
+    }
+    /* new css */
+     .sub-item p {
+         padding: 0 6px;
+    }
+     .witr_section_title_inner.text-center p, .witr_section_title_inner.text-left p, .witr_section_title_inner.text-right p {
+         width: 67%;
+    }
+     .title_in_area{
+         width: 100%;
+    }
+    /* text_widget css */
+     .witr_text_widget_inner h1, .witr_text_widget_inner h2{
+         font-size: 30px !important;
+    }
+    /* Screenshots css */
+     .dnSlide-main.done {
+         margin-left: 61px;
+    }
+     .Screenshots-fearm img {
+         width: 190% !important;
+         left: -96px;
+         top: -28px;
+         max-width: 190% !important;
+    }
+     .Screenshots .dnSlide-main .dnSlide-right-btn {
+         right: -83px;
+    }
+     .Screenshots .dnSlide-main .dnSlide-left-btn {
+         left: -43px;
+    }
+     .accordion-content {
+         padding: 23px 25px;
+    }
+    /* images_area */
+     .images_area.wittr_car_top_left .slick-dots {
+         left: 30px;
+    }
+     .singleSS {
+         padding: 61px 24px 60px;
+    }
+     .witr_nth_child:nth-child(2n) {
+         margin-top: 0;
+         margin-bottom: 30px;
+    }
+    /* blog css */
+     .wblog-content h5 > a {
+         font-size: 19px;
+    }
+     .blog-content span {
+         font-size: 13px;
+    }
+     .blog-content > a {
+         line-height: 40px;
+         padding: 0 20px;
+    }
+     .widget .widget_media_image img{
+         width:100%;
+    }
+     .blog-left-side .blog-title > ul > li > a {
+         margin-right: 8px;
+    }
+     .recent-post-text > h4 {
+         margin-top: 15px;
+         line-height: 1;
+    }
+     .footer-middle .recent-post-text > h4 {
+         margin-top: -7px;
+         line-height: 1;
+    }
+     .em-blog-content-area {
+         padding: 22px 15px 7px;
+    }
+     .witr_titles h3 {
+         font-size: 20px;
+    }
+     .witr_blog_con6 h2 {
+         font-size: 17px;
+    }
+     .witr_blog_con6 h5 a {
+         font-size: 17px;
+    }
+    /* team css */
+     .team-style-2 .em-content-title h2 {
+         font-size: 17px;
+         margin-top: -1px;
+    }
+     .team-style-2 .em-content-socials a {
+         font-size: 14px;
+    }
+    /* feature css */
+     .witr_feature2 h3 {
+         font-size: 20px;
+    }
+    /* service css */
+     .witr_content_service h3 {
+         color: #fff;
+         font-size: 20px;
+    }
+     .witr_service3_box {
+         text-align: center;
+    }
+     .witr_service3_icon {
+         float: none;
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+    /* testomonial style 8 css */
+     .witr_testomonial_area {
+         width: 85%;
+    }
+     .witr_testi_main {
+         width: 75%;
+    }
+    /* curosel-style css */
+     .curosel-style .owl-nav div {
+         left: -15px;
+    }
+     .curosel-style .owl-nav .owl-next{
+         right: -15px;
+    }
+    /* countdown css */
+     span.cdowns {
+         margin: 0 28px;
+    }
+    /* timeline css */
+     .mrr90 {
+         margin-right: 54px;
+    }
+     .mrl110 {
+         margin-left: 50px;
+    }
+    /* static tab css*/
+     .event_pcontent p, .liton_event_icon span {
+         font-size: 13px;
+    }
+     .footer-middle .mc4wp-form-fields button {
+         width: 39px;
+    }
+     .footer-bottom::before {
+         width: 94%;
+    }
+     .text-right .witr_slider_thumb {
+         left: 0px;
+    }
+     .text-left .witr_slider_thumb {
+         right: -150px;
+    }
+     .em_slider_s2_image img {
+         width: 70%;
+    }
+     .witr_back_process,.witr_process_box {
+         display: none;
+    }
+    /* add new css*/
+    /* causes */
+     .witr_couses_btnb a {
+         padding: 13px 18px;
+         font-size: 15px;
+    }
+     .witr_circal_r {
+         margin-left: 18px;
+    }
+     .witr_circal_r h6 {
+         font-size: 15px;
+    }
+    /* event */
+     .witr_event_btn a {
+         font-size: 16px;
+    }
+     #scrollUp {
+         bottom: 77px;
+         right: 30px;
+    }
+.liton_advantages_area .all_color_service {
+    padding: 30px 20px 16px 0px;
+}	
+.contact2 .apartment_area {
+	padding: 35px 20px 0px;
+    margin: 0px 0px 0px 0px;
+}	
+.witr_lf_area {
+    margin-top: 0px;
+}	
+.liton_skill_area .witr_section_title_inner h3 {
+    font-size: 32px;
+}	
+.recent-portfolio {
+    width: 28.33%;
+}	
+	
+.about_area .service-item h3 {
+    font-size: 17px;
+}	
+.post_team_idteam .slick-prev {
+    left:800px;
+}	
+.witr_service2_style4 {
+     padding: 40px 14px 40px;
+}	
+.banner-content h2, .banner-content h3 {
+    font-size: 58px;
+}	
+.home5  .witr_section_right {
+    padding: 0px 8px 0px 0px;
+}	
+.list_item2 {
+    margin-left:0;
+}	
+	
+.list_item ul li {
+    font-size: 12px;
+    margin-bottom: 10px;
+}	
+.list_item3 {
+    margin-left: -16px;
+}
+
+.home5  .witr_button_area {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+	
+	
+	
+}
+
+
+/* ------------------------------------------------- Tablet Screen : 768 ---------------------------------------------------*/
+ @media (min-width: 768px) and (max-width: 991px) {
+	 
+     .witr_swiper_height {
+         height: 800px !important;
+    }
+	.home2_swiper_area .witr_swiper_height {
+		background-position: center left;
+		background-size: cover;
+	}
+     .witr_swiper_height {
+         width: 100% !important;
+    }
+     .w_slider_4 .witr_swiper_height {
+         margin-left:0px !important;
+    }
+     .t1.witr_swiper_height {
+         width: 100% !important;
+    }
+     .w_slider_3 .t1.witr_swiper_height {
+         transform: translateX(0) !important;
+    }
+     .t2.witr_swiper_height {
+         width: 50% !important;
+         left: -20px;
+    }
+	.accordion_area.accordion_area_02 {
+		padding-top: 30px;
+	}
+	.liton_service_area {
+		margin-top: 100px;
+	}
+	.why_choose_area .witr_s_flex {
+		display: inherit;
+	}
+	.em-service2 .em-service-inner {
+		padding-right: 15px;
+	}
+	.counter_up_area.home2_counter {
+		margin-top: 100px;
+		margin-bottom: 0px;
+	}
+	.liton_team_area.home2_team {
+		padding: 130px 0px 130px;
+	}
+	.home2_togole_area .liton_content h2, .home2_togole_area .liton_content h3 {
+		font-size: 17px;
+	}
+	.witr_feature_13 .sub-item::after, .witr_feature_13 .sub-item:before {
+		top: 54%;
+	}
+	.witr_ac_style, .witr_ac_style::before {
+		font-size: 17px;
+	}
+     .w_slider_3 .t2.witr_swiper_height {
+         transform: translateX(-50%) !important;
+         left: 91%;
+    }
+     .witr_swiper_area .text-left .slider_vd_icon {
+         right: 48% !important;
+         top: 17% !important;
+    }
+     .witr_swiper_area .text-right .slider_vd_icon {
+         left: 48% !important;
+         top: 17% !important;
+    }
+     .witr_swiper_area .text-center .slider_vd_icon {
+         top: 17%;
+    }
+     .witr_sw_text_area.text-right, .witr_sw_text_area.text-left {
+         text-align: center !important;
+    }
+     .text-right .witr_swiper_content h1, .text-right .witr_swiper_content h2, .text-right .witr_swiper_content h3, .text-right .witr_swiper_content p, .text-left .witr_swiper_content h1, .text-left .witr_swiper_content h2, .text-left .witr_swiper_content h3, .text-left .witr_swiper_content p, .text-center .witr_swiper_content h1, .text-center .witr_swiper_content h2, .text-center .witr_swiper_content h3, .text-center .witr_swiper_content p {
+         width: 100% !important;
+         margin-left: auto;
+         margin-right: auto;
+         text-align:center !important;
+    }
+     .witr_swiper_content h2, .witr_swiper_content h3 {
+         font-size: 40px;
+    }
+     .text-right .witr_btn_sinner, .text-left .witr_btn_sinner {
+         text-align: center !important;
+    }
+	.witr_animate_content h1 {
+		font-size: 32px;
+	}
+	.lt_about_area .departmentList ul li a {
+		font-size: 16px;
+		padding: 8px 0px 8px;
+	}
+	.animate_image_height {
+		height: 600px;
+	}
+	/* slick slider */
+     .em-slider-title {
+         font-size: 16px;
+         margin-bottom: 10px;
+    }
+     .em-slider-sub-title {
+         font-size: 30px;
+         margin-bottom: 0;
+    }
+     .em-slider-descript {
+         display: none;
+    }
+     .em-button-button-area a {
+         margin-top: 20px;
+    }
+     .em-slider-sub-title {
+         line-height: 46px;
+    }
+    /* banner area css */
+     .witr_banner_area {
+         height: 700px;
+    }
+     .witr_banner_content h1 {
+         font-size: 58px;
+    }
+     .witr_banner_content h2 {
+         font-size: 42px;
+    }
+     .witr_banner_content p {
+         font-size: 16px;
+         width: 77%;
+    }
+     .witr_butn {
+         line-height: 49px;
+    }
+     .witr_banner_content.text-right {
+         margin-right: 20px;
+    }
+    /*=========== banner area 2 css ===============*/
+     .banner_area {
+         height: 880px;
+    }
+     .banner-content h1, .banner-content h2, .banner-content h3 {
+         font-size: 45px;
+    }
+     .witr_deshboard {
+         margin-top: 30px;
+    }
+    /*=========== Slick area css ===============*/
+     .witr_ds_content {
+         height: 670px;
+    }
+	.witr_ds_content_inner {
+		width: 100%;
+	}
+	.witr_ds_content_inner h2 {
+		font-size: 70px;
+	}	
+     .text-right .witr_ds_content_inner h1, .text-right .witr_ds_content_inner h2, .text-right .witr_ds_content_inner h3, .text-right .witr_ds_content_inner p, .text-left .witr_ds_content_inner h1, .text-left .witr_ds_content_inner h2, .text-left .witr_ds_content_inner h3, .text-left .witr_ds_content_inner p, .text-center .witr_ds_content_inner h1, .text-center .witr_ds_content_inner h2, .text-center .witr_ds_content_inner h3, .text-center .witr_ds_content_inner p {
+         width: 100% !important;
+         margin-left: auto;
+         margin-right: auto;
+         text-align:center !important;
+    }
+     .text-right .witr_ds_content_inner h1, .text-right .witr_ds_content_inner h2, .text-right .witr_ds_content_inner h3, .text-left .witr_ds_content_inner h1, .text-left .witr_ds_content_inner h2, .text-left .witr_ds_content_inner h3, .text-center .witr_ds_content_inner h1, .text-center .witr_ds_content_inner h2, .text-center .witr_ds_content_inner h3{
+    }
+     .witr_btn {
+    }
+     .slider_btn {
+         text-align: center;
+    }
+     .witr_slider_thumb.em_slider_s2_image {
+         display: none;
+    }
+    /* Em-Creative Header */
+     .creative_header_curve {
+         display: none;
+    }
+     .creative_header_logo {
+         padding-right: 0;
+         text-align: center;
+    }
+     .em_creative_header {
+         background: transparent none repeat scroll 0 0;
+         z-index: 999;
+    }
+     .single_header_address {
+         padding: 27px 0 20px;
+    }
+     .creative_header_button {
+         background: #f9f9f9 none repeat scroll 0 0;
+         padding: 30px 0;
+         position: relative;
+         text-align: center;
+    }
+     .creative_header_button:before, .em_creative_header:before, .em_creative_header:after {
+         display: none;
+    }
+     .single_header_address.ctrp {
+         padding-bottom: 50px;
+    }
+     .em_creative_header {
+         padding-bottom: 0;
+    }
+     .em-nivo-slider-wrapper .nivo-directionNav {
+         display: none;
+    }
+    /* section_title */
+    /* .witr_section_title_inner h1, .witr_section_title_inner h2, .witr_section_title_inner h3 {
+         font-size: 32px;
+    }
+     */
+     .witr_section_title_inner.text-center p, .witr_section_title_inner.text-left p, .witr_section_title_inner.text-right p {
+         width: 83%;
+    }
+     .title_in_area{
+         width: 100%;
+    }
+    /* about css */
+     .witr_text_widget_inner h1, .witr_text_widget_inner h2 {
+         font-size: 23px;
+    }
+     .witr_about_content {
+         text-align: center;
+    }
+     .witr_about_image {
+        /* margin-bottom: 100px;
+         */
+    }
+    /* accourdion css */
+     .liton-accourdion-title h2 i {
+         display: none;
+    }
+     .accordion-content {
+         padding: 23px 0px;
+    }
+    /* service css */
+     .witr_custom2_icon {
+         float: none;
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+     .witr_service3_box {
+         text-align: center;
+    }
+     .witr_service3_icon {
+         float: none;
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+    /* testomonial css */
+     .testomonial.testomonial-5 .test-part img.testimg {
+         top: 86%;
+    }
+     .witr_content_test7 {
+         padding: 0;
+    }
+    /* testomonial style 8 css */
+     .witr_testomonial_area {
+         width: 90%;
+    }
+     .witr_testi_main {
+         width: 90%;
+    }
+    /* blog css */
+     .blog-img img {
+         width: 100%;
+    }
+     .sub-border-2 .sub-item span {
+         top: 31px;
+         left: 75%;
+    }
+     .sub-item p {
+         padding: 0;
+    }
+     .digital-item ul li a {
+         padding: 7px 57px;
+    }
+     .mobil-item {
+         margin-top: 30px;
+    }
+     .download-demo {
+         text-align: center;
+    }
+    /* Screenshots css */
+     .dnSlide-main.done {
+         margin-left: -54px;
+    }
+     .Screenshots-fearm img {
+         width: 240% !important;
+         left: -149px;
+         top: -24px;
+         max-width: 240% !important;
+    }
+     .Screenshots .dnSlide-main .dnSlide-right-btn {
+         right: 0px;
+    }
+     .Screenshots .dnSlide-main .dnSlide-left-btn {
+         left: 47px;
+    }
+     .liton-accourdion-title h2 {
+         padding-left: 20px;
+    }
+     .w_apps_button a {
+         padding: 3px 20px 11px 20px !important;
+    }
+     span.iliton {
+         font-size: 20px;
+         margin-right: 10px;
+    }
+     span.spaninner {
+         font-size: 20px;
+    }
+    /* about css */
+     .digital-img img, .witr_app_area .digital-content h3 {
+         margin-top:0px !important;
+    }
+    /* counter css */
+     .witr_counter_single {
+         text-align: center;
+    }
+     .witr_counter_icon i {
+         margin-bottom: 15px;
+         margin-right: 0;
+         float: none;
+    }
+     .witr_custom_icon {
+         margin-bottom: 10px;
+    }
+     .witr_custom_icon i{
+         margin-right: 0;
+         float: none;
+    }
+     .footer-item form label {
+         margin-left: 30px;
+    }
+     .deshboard img {
+         width: 100%;
+    }
+     .video-part .video-overlay {
+         padding: 200px 0;
+    }
+     .video-item h3 {
+         font-size: 30px;
+    }
+    /* blog css */
+     .blog-content span {
+         font-size: 14px;
+    }
+     .blog-left-side .widget h2 {
+         font-size: 19px;
+    }
+     .blog-page-title h2 {
+         font-size: 18px;
+    }
+     .widget .widget_media_image img{
+         width:100%;
+    }
+     .blog-left-side .blog-title > ul > li > a {
+         height: 30px;
+         width: 30px;
+         line-height: 29px;
+         font-size: 15px;
+         margin-right: 2px;
+    }
+     .recent-post-text > h4 {
+         line-height: 23px;
+    }
+   .recent-post-text h4 a, .recent-post-text .rcomment {
+		font-size: 18px;
+	}
+     .breadcumb-area {
+         padding-top: 93px !important;
+    }
+     .em-blog-content-area {
+         padding: 15px 15px 10px;
+    }
+    /* call-to-action css */
+     .all_cal_color {
+         text-align: center;
+    }
+     .witr_9 .liton_video_inner{
+         margin-bottom: 73px;
+    }
+     .witr_9 .liton_video_inner{
+         top: 40px;
+    }
+     .witr_col_image {
+         margin-top: 50px;
+    }
+     .witr_11 {
+         margin-top: 100px;
+    }
+     .witr_5 .liton_content p{
+         width: 100%;
+    }
+     .witr_b9{
+         margin-top: 95px;
+    }
+    /* single portfolio2 */
+     .portfolio-details-box {
+         margin-left: 0;
+    }
+     .pimgs img {
+         width: 100%;
+    }
+    /* contact css */
+     .witr_field2 .witr_form_field2, .witr_field2 .witr_form_field2 {
+         float: none;
+         width: 100%;
+    }
+     .witr_form_controls2 .witr_field2 .witr_form_field2:nth-child(odd), .witr_form_controls2 .witr_field2 .witr_form_field2:nth-child(odd) {
+         margin-right: 0;
+    }
+    /* countdown css */
+     span.cdowns {
+         margin-bottom: 20px;
+    }
+     span.cdowns:before {
+         display: none;
+    }
+     span.cdowns:after {
+         display: none;
+    }
+     .witr_btn {
+         margin-top: 11px !important;
+    }
+    /* curosel-style css */
+     .curosel-style .owl-nav div {
+         left: -15px;
+    }
+     .curosel-style .owl-nav .owl-next{
+         right: -15px;
+    }
+    /* timeline css */
+     .mrl65,.mrr15{
+         display:none;
+    }
+     .mrr50 {
+         margin-right: -235px;
+    }
+     .mrl110 {
+         margin-left: -63px;
+    }
+     .mrr90 {
+         margin-right: -40px;
+    }
+    /* static tab css*/
+     .liton_event_thumb {
+         float: none;
+         margin-bottom: 15px;
+    }
+     .liton_single_event {
+         margin: 0;
+    }
+     .liton_event_icon span {
+         margin-right: 5px;
+    }
+     .testomonial-slide .slick-prev, .blog_wrap .slick-prev {
+         left: 15px;
+    }
+     .testomonial-slide .slick-next, .blog_wrap .slick-next {
+         right: 15px;
+    }
+     .recent-post-text {
+         margin-top: 10px;
+    }
+    /*====== new css ======= */
+    /* ab_videoArea */
+     .singleAbSlide {
+         right: 0;
+         left: 0;
+         bottom: -218px;
+    }
+     .em_single_testimonial {
+         padding: 37px 20px 26px;
+    }
+     .em_testi_logo {
+         right: 15px;
+         top: 35px;
+    }
+     .witr_nth_child:nth-child(2n) {
+         margin-top: 0;
+         margin-bottom:30px;
+    }
+     .witr_single_call .text-right {
+         text-align: center !important;
+    }
+     .witr_center{
+         text-align: center;
+    }
+     .em_slider_social {
+         top: 41%;
+         z-index: 999999;
+         display:none;
+    }
+     .liton_content {
+         margin-bottom: 30px;
+    }
+     .em-service2.sleft .em-service-icon {
+         float: none;
+         margin-bottom: 10px;
+    }
+    /* new css add */
+     .witr_event_style_5 .witr_event_d {
+         padding-top: 30px;
+    }
+     .witr_event_style_5 .witr_event_btn {
+         margin-top: 8px;
+    }
+     .witr_appoimentle{
+         position: initial !important;
+    }
+     #scrollUp {
+         bottom: 75px;
+         right: 30px;
+    }
+	.footer-bottom:before {
+		width: 90%;
+	}	
+.liton_features_area {
+    margin-top: 100px;
+}	
+.about_thumb {
+    padding: 0;
+}
+.about_thumb img {
+    width: 100%;
+}	
+.witr_section_right {
+    padding: 40px 20px 0px 0px;
+}	
+.liton_advantages_area .all_color_service {
+   padding: 30px 11px 16px 0px;
+}
+.liton_advantages_area .em-service-title h3 {
+
+    font-size: 19px;
+}
+.contact2 .apartment_area {
+    margin: 0px 50px 0px 50px;
+}
+.witr_lf_area {
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+.skill_thumb img {
+    width: 100%;
+}
+.footer-menu ul li a {
+    padding: 0 6px;
+    font-size: 14px;
+}
+
+.vision_thumb_area img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.post_team_idteam .slick-prev {
+    left:564px;
+}
+.liton_service2_area .witr_custom2_icon {
+    float: left;
+    margin-right: 25px;
+}
+.single_page .witr_section_title_inner h3 {
+    font-size: 27px;
+}	
+	
+.testomonial .test-part.witr_testi_s_11 {
+    padding: 30px 17px 20px;
+}	
+.contact_em_top {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}	
+.skill_title_bg {
+    padding: 93px 30px 30px 30px;
+}
+.skill_title_bg.title2 {
+    padding: 50px 30px 100px 30px;
+}
+
+
+
+
+	
+	
+	
+	
+}
+/* ------------------------------------------------- Small Mobile : 320 ---------------------------------------------------*/
+ @media (max-width: 767px) {
+     .witr_swiper_height {
+         height:700px !important;
+         width: 100% !important;
+    }
+	.witr_swiper_area.home2_swiper_area .witr_swiper_height {
+		background-position: center left;
+		background-size: cover;
+	}
+	.liton_service_area {
+		margin-top: 100px;
+	}
+	.witr_animate_content h1 {
+		font-size: 27px;
+	}
+	.animate_icon_list_text {
+		padding-left: 5px;
+	}
+	.animate_list {
+		display: inherit; 
+		text-align: center;
+	}
+	.lt_animate_area {
+		padding: 70px 0px 70px 0px;
+	}
+	.department_flex {
+		display: inherit;
+	}
+	.single_service_area .witr_text_widget_inner h2 {
+		font-size: 25px;
+	}
+	.liton_service_area .em_service_text_box {
+		padding: 43px 10px 25px 60px;
+	}
+	.service_icon_box {
+		padding: 20px 20px 20px 20px;
+	}
+	.witr_sw_text_area {
+		width: 100%;
+	}
+	.witr_ds_content_inner {
+		width:90%;
+	}
+     .w_slider_3 .witr_swiper_height {
+         transform: translateX(0) !important;
+    }
+     .w_slider_4 .witr_swiper_height {
+         margin-left:0px !important;
+    }
+     .m1.witr_swiper_height {
+         width: 100% !important;
+    }
+     .witr_swiper_area .text-left .slider_vd_icon {
+         right: 37% !important;
+         top: 12% !important;
+    }
+     .witr_swiper_area .text-right .slider_vd_icon {
+         left: 40% !important;
+         top: 12% !important;
+    }
+     .witr_swiper_area .text-center .slider_vd_icon {
+         top: 12%;
+    }
+     .witr_sw_text_area.text-right, .witr_sw_text_area.text-left {
+         text-align: center !important;
+    }
+     .swiper-button-prev,.swiper-button-next {
+         display: none;
+    }
+     .witr_swiper_area .witr_btn {
+         margin-right: 0;
+         margin-bottom: 10px;
+    }
+     .text-right .witr_swiper_content h1, .text-left .witr_swiper_content h1, .text-center .witr_swiper_content h1{
+         font-size:20px;
+    }
+     .text-right .witr_swiper_content h2, .text-right .witr_swiper_content h3, .text-left .witr_swiper_content h2, .text-left .witr_swiper_content h3, .text-center .witr_swiper_content h2, .text-center .witr_swiper_content h3{
+         font-size:25px;
+    }
+     .text-right .witr_swiper_content h1, .text-right .witr_swiper_content h2, .text-right .witr_swiper_content h3, .text-right .witr_swiper_content p, .text-left .witr_swiper_content h1, .text-left .witr_swiper_content h2, .text-left .witr_swiper_content h3, .text-left .witr_swiper_content p, .text-center .witr_swiper_content h1, .text-center .witr_swiper_content h2, .text-center .witr_swiper_content h3, .text-center .witr_swiper_content p {
+         width: 100% !important;
+         margin-left: auto;
+         margin-right: auto;
+         text-align:center !important;
+    }
+     .witr_swiper_content p {
+         font-size: 17px;
+    }
+     .text-right .witr_btn_sinner, .text-left .witr_btn_sinner {
+         text-align: center !important;
+    }	
+	.animate_image_height {
+		height: 500px;
+	}
+	/* slick slider	 */
+     .em-slider-title {
+         font-size: 16px;
+         margin-bottom: 10px;
+    }
+     .em-slider-sub-title {
+         font-size: 28px;
+         margin-bottom: 0;
+    }
+     .em-slider-descript {
+         display: none;
+    }
+     .em-slider-button {
+         display: none;
+    }
+     .em-nivo-slider-wrapper .nivo-controlNav {
+         display: none;
+    }
+     .text-left .em_slider_s2_content {
+         margin-right: auto;
+    }
+     .text-right .em_slider_s2_content {
+         margin-left: auto;
+    }
+     .em-slider-sub-title {
+         line-height: 32px;
+    }
+     .em_slider_inner.text-left, .em_slider_inner.text-right{
+         text-align:center !important;
+    }
+     .em_slider_s2_image {
+         display: none;
+    }
+    /*========= banner area css ===========*/
+     .witr_banner_area {
+         height: 640px;
+    }
+     .witr_banner_content h1 {
+         font-size: 25px;
+    }
+     .witr_banner_content h2 {
+         font-size: 20px;
+    }
+     .witr_banner_content p {
+         font-size: 16px;
+         width: 87%;
+    }
+     .witr_banner_content.text-left, .witr_banner_content.text-right{
+         text-align:center !important;
+    }
+     .witr_banner_content.text-left p, .witr_banner_content.text-right p {
+         width: 100%;
+    }
+     .witr_banner_content.text-left {
+         margin-left: 0;
+    }
+     .witr_banner_content.text-right {
+         margin-right: 0;
+    }
+     .witr_video_butns {
+         display: block;
+         margin-top: 15px;
+    }
+    /*=========== banner area 2 css ===============*/
+     .banner_area {
+         text-align: center;
+    }
+     .banner-content h1, .banner-content h2, .banner-content h3 {
+         font-size: 27px;
+    }
+     .witr_float .butn, .witr_float .butn {
+         float: none;
+         display: block;
+         margin-bottom: 10px;
+         margin-right: 0;
+    }
+     .witr_btns2 {
+         display: block;
+         margin-top: 20px;
+    }
+     .banner-content form {
+         width: 100%;
+    }
+     .banner-content input {
+         width: 100%;
+    }
+     .banner-content button {
+         position: inherit;
+         margin-top: 20px;
+    }
+     .witr_deshboard {
+         margin-top: 30px;
+    }
+	/* service area2 */
+	.liton_service_area2.liton_service_area.home2_service_area {
+		padding: 125px 0px 0px;
+	}
+	.home2_togole_area .liton_button a {
+		padding: 18px 35px;
+		font-size: 17px;
+		margin-right: 0px;
+	}
+	.home2_togole_area .single_image {
+		margin: 10px 20px 0px 0px;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.cal_to_toggole {
+		display: inherit;
+	}
+	/* why choose area css */
+	.why_choose_area .witr_btn {
+		margin-bottom: 30px;
+	}
+	.home2_togole_area .liton_button.no_margin {
+		margin-top: 0;
+		width: 38%;
+	}
+	.home2_togole_area .liton_button.no_margin {
+		margin-top: 0;
+		width: 60%;
+	}
+    /*=========== Slick area 2 css ===============*/
+     .witr_ds_content {
+         height: 600px;
+         background-size: cover;
+         background-position: center center;
+         overflow: hidden;
+    }
+     .text-right .witr_ds_content_inner h1, .text-right .witr_ds_content_inner h2, .text-right .witr_ds_content_inner h3, .text-right .witr_ds_content_inner p, .text-left .witr_ds_content_inner h1, .text-left .witr_ds_content_inner h2, .text-left .witr_ds_content_inner h3, .text-left .witr_ds_content_inner p, .text-center .witr_ds_content_inner h1, .text-center .witr_ds_content_inner h2, .text-center .witr_ds_content_inner h3, .text-center .witr_ds_content_inner p {
+         width: 100% !important;
+         margin-left: auto;
+         margin-right: auto;
+         text-align:center !important;
+    }
+     .text-right .witr_ds_content_inner h1, .text-right .witr_ds_content_inner h2, .text-right .witr_ds_content_inner h3, .text-left .witr_ds_content_inner h1, .text-left .witr_ds_content_inner h2, .text-left .witr_ds_content_inner h3, .text-center .witr_ds_content_inner h1, .text-center .witr_ds_content_inner h2, .text-center .witr_ds_content_inner h3{
+         font-size:23px;
+    }
+     .witr_btn {
+         padding: 10px 26px;
+         margin-right: 0;
+    }
+     .slider_btn {
+         text-align: center;
+    }
+     .section-title.t_center {
+         width: 100%;
+    }
+     .section-title.t_left {
+         width: 100%;
+    }
+     .section-title.t_right {
+         width: 100%;
+    }
+    /* top bar */
+    /* .top-address {
+         text-align: center;
+    }
+     .social-icons.text-right {
+         text-align: center;
+    }
+     */
+     .top-address p a, .top-right-menu ul.social-icons li a, .top-address p span {
+         font-size: 13px;
+    }
+     .top-right-menu ul.social-icons {
+    }
+    /* footer bar */
+     .footer-top-inner p {
+         width: 100%;
+    }
+     .footer-menu ul {
+         margin: 10px 0 0;
+         text-align: center !important;
+    }
+     .footer-menu ul li a {
+         font-size: 14px;
+    }
+     .copy-right-text p {
+         text-align: center;
+    }
+     .breadcumb-blog-area {
+         padding: 50px 0;
+    }
+    /* blog css */
+     .em-blog-content-area {
+         padding: 20px 10px 5px;
+    }
+     .liton-blog-meta-left a, .liton-blog-meta-left span {
+         font-size: 14px;
+         margin-right: 3px;
+    }
+     .liton-blog-meta-right a, .liton-blog-meta-right span {
+         font-size: 11px;
+         margin-left: 3px;
+    }
+    /* single blog */
+     .post_reply ul, .blog-content ul, .single-blog-content ul {
+         padding-left: 20px;
+    }
+     .post_reply ol, .blog-content ol, .single-blog-content ol {
+         padding-left: 20px;
+    }
+     .comments-area .children {
+         margin-left: 10px;
+    }
+     .comment_field .input-field {
+         width: 100%;
+    }
+     .pdsr {
+         padding-top: 50px;
+    }
+     .pdsl {
+         padding-bottom: 90px;
+    }
+     #wp-calendar {
+         display: block;
+    }
+    /* footer css */
+     .copy-right-text p {
+         font-size: 11px;
+    }
+     .footer-social-icon a i {
+         font-size: 16px;
+         height: 35px;
+         line-height: 35px;
+         width: 35px;
+    }
+    /* Em-Creative Header */
+     .creative_header_curve {
+         display: none;
+    }
+     .creative_header_logo {
+         padding-right: 0;
+         text-align: center;
+    }
+     .em_creative_header {
+         background: transparent none repeat scroll 0 0;
+         z-index: 999;
+    }
+     .single_header_address {
+         padding: 10px 71px 10px 0;
+         text-align: center;
+    }
+     .creative_header_button {
+         background: #f9f9f9 none repeat scroll 0 0;
+         padding: 30px 0;
+         position: relative;
+         text-align: center;
+    }
+     .creative_header_icon {
+         float: none;
+         margin-bottom: 10px;
+         margin-right: 0;
+         overflow: hidden;
+    }
+     .creative_header_address .col-sm-4.col-xs-12{
+         padding-left:0;
+    }
+     .creative_header_logo {
+         display: none;
+    }
+     .creative_header_button:before, .em_creative_header:before, .em_creative_header:after {
+         display: none;
+    }
+     .single_header_address.ctrp {
+         padding-bottom: 40px;
+    }
+    /* new css */
+    /* footer css */
+     .copy-right-text p {
+         font-size: 15px;
+    }
+     .liton-blog-thumb img {
+         width: 100%;
+    }
+    /* section title css */
+     .witr_section_title_inner h1, .witr_section_title_inner h2, .witr_section_title_inner h3{
+         font-size: 21px;
+         line-height: 30px;
+    }
+     .witr_section_title_inner h2 {
+         margin-bottom: 4px;
+    }
+     .title_in:before, .title_in:after {
+         background: none;
+    }
+     .title_tx h2 {
+         font-size: 16px;
+         line-height: 20px;
+    }
+     .title_in {
+         float: none;
+         padding-right: 0;
+    }
+     .title_in_area, .witr_section_title_inner.text-center p, .witr_section_title_inner.text-left p, .witr_section_title_inner.text-right p {
+         width: 100%;
+    }
+     .witr_section_title_inner p {
+         padding-top: 10px;
+    }
+     .witr_section_title{
+         text-align: center;
+    }
+     .witr_section_title .text-right {
+         text-align: center !important;
+    }
+     .title_btn {
+         margin: 30px 0 20px;
+    }
+    /* about css */
+     .witr_text_widget_inner h1, .witr_text_widget_inner h2 {
+         font-size: 20px;
+         line-height: 36px;
+    }
+     .witr_text_widget_inner p, .about-content span{
+         font-size: 16px;
+    }
+    /* feature area */
+     .em_feature-icon {
+         font-size: 18px;
+         margin-right: 15px;
+    }
+     .em_feature-icon i {
+         float: none;
+    }
+     .em-feature-title h2 {
+         margin-top: 0;
+         margin-bottom: 0;
+    }
+     .witr_feature_content_3d h3 {
+         font-size: 21px;
+    }
+     .sub-item h3 {
+         font-size: 21px;
+    }
+     .w_apps_button_area {
+         text-align: center;
+    }
+     .witr_app_area .digital-content h3 {
+         margin: 0 !important;
+         font-size: 25px;
+    }
+    /* Screenshots css */
+     .dnSlide-main.done {
+         -webkit-transform: scale(0.4);
+         transform: scale(0.4);
+         margin-left: -280px;
+         top: -120px;
+    }
+     .Screenshots-fearm img {
+         width: 260% !important;
+         max-width: 260% !important;
+         left: -65px;
+    }
+     .dnSlide-main img{
+         width: 100%;
+    }
+     .dnSlide-btn {
+         display: none;
+    }
+     .Screenshots-area .Screenshots-frame-img {
+         left: -64%;
+         top: -13px;
+         width: 232%;
+    }
+     .digital-item ul li a {
+         padding: 7px 27px;
+    }
+     .mobil-item {
+         margin-top: 30px;
+    }
+    /* countdown css */
+     span.cdowns {
+         margin-bottom: 30px;
+    }
+     span.cdowns:before {
+         display: none;
+    }
+     span.cdowns:after {
+         display: none;
+    }
+     .witr_btn {
+         margin-top: 11px !important;
+    }
+    /* testomonial css */
+     .testomonial.testomonial-5 .test-part img.testimg {
+         top: 88%;
+    }
+     .testomonial .test-part img {
+         margin: 0 !important;
+    }
+     .em_test_thumb {
+         margin-right:15px;
+    }
+     .em_testi_title h2 {
+         font-size: 17px;
+    }
+     .testiCreCon {
+         padding: 8px 20px 30px 20px;
+    }
+     .witr_content_test7 {
+         padding: 0;
+    }
+    /* testomonial style 8 css */
+     .witr_testomonial_area {
+         width: 100%;
+    }
+     .witr_test_part {
+         float: none;
+         margin-left: 0;
+         margin-right: 0;
+    }
+     .witr_test_part img {
+         margin: auto;
+    }
+     .witr_testi_main {
+         width: 100%;
+    }
+    /* video css */
+     .video-part .video-overlay .video-item h3 {
+         color: #fff;
+         font-size: 25px;
+    }
+     .video-part .video-overlay {
+         padding: 110px 0 !important;
+    }
+    /* service css */
+     .service-item {
+         text-align: center;
+    }
+     .em-service2.sleft .em-service-icon, .em-service2.sright .em-service-icon {
+         float: none;
+         margin-bottom: 10px;
+    }
+     .witr_service2_box {
+         text-align: center;
+    }
+     .witr_custom2_icon {
+         float: none;
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+     .witr_service3_box {
+         text-align: center;
+    }
+     .witr_service3_icon {
+         float: none;
+         margin-right: 0;
+         margin-bottom: 15px;
+    }
+    /* tab css */
+     .liton_tab li {
+         margin-bottom: 20px;
+    }
+     .witr_adv_tab_content {
+         margin: 0;
+    }
+     .witr_taba_style1 .nav-tabs .nav-link {
+         margin-right: 0px;
+    }
+    /* accourdion css */
+     .witr_ac_style {
+         font-size: 15px;
+    }
+     .witr_ac_style:before, .active .witr_ac_style:before {
+         right: 10px;
+    }
+     .liton-accourdion-title h2{
+         font-size: 14px;
+         padding-left: 20px;
+    }
+    /* blog css */
+     .blog-img img {
+         width: 100%;
+    }
+     .witr_blog_con {
+         padding: 12px 10px 18px;
+    }
+     .witr_blog_con h2 {
+         font-size: 21px;
+    }
+     .witr_post_Author {
+         margin: 0 10px;
+    }
+	.recent-post-text {
+		text-align: left;
+	}
+    /* counter css */
+    .witr_counter_single {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.witr_counter_icon i{
+         margin-bottom: 15px;
+         margin-right: 20px;
+         float: none;
+    }
+     .witr_custom_icon {
+         margin-bottom: 10px;
+    }
+     .witr_custom_icon i{
+         margin-right: 0;
+         float: none;
+    }
+	.why_choose_area .witr_s_flex {
+		display: inherit;
+	}
+	.em-service2 .em-service-inner {
+		padding-right: 0px; 
+	}
+	.why_choose_area {
+		margin-left: 30px;
+	}
+    /* video css */
+     .video-play-6 {
+         width: 80%;
+    }
+     .subscribe form input {
+         width: 500px;
+    }
+     .download-content-6 ul li a {
+         padding: 12px 46px 12px 80px;
+    }
+     .donwload-overlay {
+         padding-top: 215px;
+    }
+     .video-part .video-overlay {
+         padding: 200px 0;
+    }
+     .play-overlay i {
+         font-size: 32px;
+    }
+     .digital-img {
+         margin-top: 100px;
+    }
+    /* contact css */
+     .field.topfield .form-field {
+         float: none;
+         width: 100%;
+    }
+     .form-controls .field.topfield .form-field:nth-child(2n) {
+         margin-left: 0;
+    }
+     .witr_field1 .witr_form_field1 {
+         width: 100%;
+    }
+     .witr_form_controls1 .witr_field1 .witr_form_field1:nth-child(2n) {
+         margin-left: 0;
+    }
+    /* apps_button css */
+     .w_apps_button_image {
+         margin-right: 0;
+         margin-bottom: 20px;
+    }
+     .tab_content.text-left {
+         text-align: center !important;
+    }
+    /* blog css */
+     .footer-middle {
+         text-align: center;
+    }
+     .blog-content h5 > a {
+         font-size: 17px;
+    }
+     .blog-content span {
+         font-size: 12px;
+    }
+     .blog-page-title h2 {
+         font-size: 17px;
+    }
+     .wblog-content h5 > a {
+         font-size: 20px;
+    }
+     .wblog-content span {
+         margin-right: 5px;
+    }
+     .blog-left-side .blog-title > ul > li > a {
+         margin-right: 8px;
+    }
+     .widget .widget_media_image img{
+         width:100%;
+    }
+     .recent-post-text > h4 {
+         margin-top: 2px;
+         line-height: 1;
+    }
+     .recent-post-text h4 a {
+         font-size: 14px;
+    }
+     .witr_post_Author6{
+    }
+     .witr_blog_con6 h2 {
+         font-size: 17px;
+    }
+     .witr_blog_con6 h5 a {
+         font-size: 15px;
+    }
+    /* call to action */
+     .all_cal_color {
+         text-align: center;
+    }
+     .liton_video_inner{
+         top: 21px;
+    }
+     .liton_video11.liton_video_inner{
+         top: 50%;
+    }
+     .liton_button a {
+         margin-bottom: 30px;
+         margin-right: 0px;
+    }
+     .liton_content h2, .liton_content h3{
+         font-size: 23px;
+    }
+     .witr_9 .liton_video_inner{
+         margin-bottom: 73px;
+    }
+     .witr_b9 {
+         margin-top: -10px;
+    }
+     .liton_content {
+         margin-bottom: 30px;
+    }
+     .mc4wp-form-fields button {
+         width: 100%;
+         position: inherit;
+         padding: 25px 30px;
+         margin-top: 25px;
+    }
+     .witr_joined .witr_con_btn2 .w_btn2 {
+         position: inherit;
+         width: 100%;
+    }
+     .witr_sstyle_9 {
+         padding: 42px 20px 50px;
+    }
+     .w_apps_button {
+         margin-bottom: 30px;
+    }
+    /* single portfolio2 */
+     .portfolio-details-box {
+         margin-left: 0;
+    }
+     .portfolio-details-box ul li span.eright {
+         font-size: 15px;
+         margin-left: 0;
+    }
+     .portfolio-details-box ul li b {
+         font-size: 15px;
+    }
+     .portfolio-details-box h2 {
+         padding-top: 20px;
+    }
+     .portfolio-details-box .liton-single-icon-inner a {
+         margin: 0 4px;
+    }
+    /* single_protfolio css */
+     .single_protfolio {
+         margin-bottom: 30px;
+    }
+     .portfolio_nav ul li {
+         padding: 6px 20px;
+    }
+    /* contact css */
+     .witr_field2 .witr_form_field2, .witr_field2 .witr_form_field2 {
+         float: none;
+         width: 100%;
+    }
+     .witr_form_controls2 .witr_field2 .witr_form_field2:nth-child(odd), .witr_form_controls2 .witr_field2 .witr_form_field2:nth-child(odd) {
+         margin-right: 0;
+    }
+    /* display none css*/
+     .owl-nav, .slick-prev, .slick-next, .em-nivo-slider-wrapper .nivo-directionNav {
+         display: none;
+    }
+    /* timeline css*/
+     .witr_sicon_bottom.witr_hd_timeline_contant {
+         padding-bottom: 20px;
+         padding-top: 30px;
+    }
+     .mrl65 {
+         margin-left: 16px;
+         padding-top: 25px;
+    }
+     .mrl110 {
+         margin-left: 17px;
+         padding-top: 25px;
+        ;
+    }
+     .mrr90 {
+         margin-right: 15px;
+    }
+     .mrr50 {
+         margin-right: 14px;
+    }
+     .mrr15 {
+         margin-right: 14px;
+    }
+    /* static tab css*/
+     .liton_event_thumb {
+         float: none;
+         margin-bottom: 15px;
+    }
+     .liton_single_event {
+         margin: 0;
+    }
+     .liton_event_icon span {
+         margin-right: 5px;
+    }
+     #sb_instagram .sbi_photo_wrap {
+         margin-bottom: 25px;
+    }
+     .testomonial-slide .slick-prev, .blog_wrap .slick-prev {
+         left: 15px;
+    }
+     .testomonial-slide .slick-next, .blog_wrap .slick-next {
+         right: 15px;
+    }
+     .em-feature {
+         margin-bottom: 23px;
+    }
+     .single_counter {
+         margin-bottom: 20px;
+    }
+     .woocommerce div.product .woocommerce-tabs ul.tabs li a {
+         padding: .5em 6px;
+    }
+     .woocommerce div.product .woocommerce-tabs ul.tabs li {
+         padding: 0px .5em;
+         margin-right: 6px;
+    }
+     .liton-header-top {
+         display:none;
+    }
+     .accordion_area {
+         padding-top: 30px;
+    }
+     .footer-sociala-icon {
+         float: none;
+    }
+     .footer-sociala-info p {
+         text-align: center;
+    }
+    /*====== new css ======= */
+    /* ab_videoArea */
+     .ab_videoArea {
+         padding: 44px 23px 40px;
+    }
+     .singleAbSlide {
+         position: inherit;
+         bottom: -30px;
+         right: 0;
+         left: 0;
+    }
+    /* service */
+     .singleSS {
+        /* padding: 61px 24px 60px;
+         */
+    }
+     .detail_SS h3 {
+         font-size: 21px;
+    }
+     .em_single_testimonial {
+         padding: 37px 20px 26px;
+    }
+     .witr_testi_itemt {
+         padding: 0px;
+    }
+     .em_testi_logo {
+         right: 15px;
+         top: 35px;
+    }
+     .witr_nth_child:nth-child(2n) {
+         margin-top: 0;
+    }
+	.img_text_part_dflex,	
+	.two_part_dflex {
+		display: inherit;
+		text-align: center;
+	}
+	.single_2p_testimonial {
+		text-align: center;
+	}
+	.title_and_sub {
+		margin: 10px 0;
+	}	
+    /* about css */
+     .witr_text_widget_inner h1, .witr_text_widget_inner h2 {
+         font-size: 23px;
+    }
+     .witr_about_content {
+         text-align: center;
+    }
+     .witr_about_content h3 {
+         font-size: 30px;
+    }
+     .witr_about_image {
+         margin-top: 30px;
+    }
+     .witr_service3_box {
+         top: 50%;
+         transform: translateX(-50%) translateY(-50%);
+         left: 50%;
+        padding: 0;
+    }
+     .em_slider_social {
+         top: 40%;
+         display: none;
+    }
+    /* team css */
+     .witr_back_img img {
+         height: 554px !important;
+         height: auto;
+    }
+    /* new css add */
+     .witr_dis_btngr {
+         display: inherit;
+    }
+     .witr_circal_r {
+         margin-left: 0;
+    }
+     .witr_event_style_5 .witr_event_d {
+         padding-top: 3px;
+    }
+     .witr_event_style_5 .witr_event_btn {
+         margin-top: 5px;
+    }
+     .witr_appoimentle{
+         position: initial !important;
+    }
+     #scrollUp {
+         bottom: 134px;
+         right: 30px;
+    }
+	.footer-bottom:before {
+		width: 85%;
+	}	
+	.liton_features_area {
+		margin-top: 100px;
+	}
+	
+.witr_section_right {
+    padding: 40px 0px 0px 0px;
+}
+.contact2 .apartment_area {
+    margin: 0px 0px 0px 0px;
+}	
+.contact2 .apartment_text p {
+    font-size: 28px;
+}	
+.liton_skill_area .witr_section_title_inner h3 {
+    font-size: 22px;
+}	
+.witr_lf_area {
+    margin-bottom: 50px;
+	    margin-top: 0px;
+}	
+.witr_section_right  .witr_section_title_inner h3 {
+    font-size: 23px;
+}	
+.vision_thumb_area {
+    margin-top: 30px;
+}	
+.liton_team2_area .witr_section_title_inner h3 {
+    font-size: 29px;
+}
+.post_team_idteam .slick-prev, .post_team_idteam .slick-next {
+    opacity: 0;
+}	
+.liton_service2_area .witr_custom2_icon {
+    float: left;
+}	
+.contact_thumb_area {
+    margin-bottom: 40px;
+}	
+.witr_taba_style1 .nav-tabs .nav-link {
+	padding: 20px 24px;
+}
+.style_2 .all_pricing_color ul li:nth-child(odd) {
+    padding: 0px 55px 0px;
+}
+.style_2 .all_pricing_color ul li {
+    padding: 0px 55px 0px;
+}
+.privacy_title .witr_section_title_inner h3 {
+    font-size: 19px;
+}
+.liton_heading_bg_area .witr_animate_content h1 {
+    font-size: 26px;
+}
+.countdown_page .witr_section_title_inner h3 {
+    font-size: 27px;
+}
+.brpt h2 {
+	font-size: 30px;
+}
+
+.liton_contact_area .em-service2.sleft .em-service-icon {
+    float: none;
+}
+.contact_em_top {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.home2_service .witr_section_title_inner {
+    text-align: center;
+}	
+.home2_service .text-right {
+    text-align: center!important;
+}	
+.skill_title_bg {
+    padding: 93px 30px 30px 30px;
+}	
+.skill_title_bg.title2 {
+    background: #fa4006;
+    padding: 50px 30px 100px 30px;
+}
+
+.witr_6 .liton_content p, .witr_5 .liton_content p {
+    width: 100%;
+    margin: auto;
+}
+
+.list_item2 {
+    margin-left: 0px;
+}
+.list_item3 {
+    margin-left: 0px;
+}
+.liton_contact_bg_area {
+    background-position: center right;
+}
+
+
+
+
+	
+	
+	
+	
+}
+
+
+
+/* ------------------------------------------------- Large Mobile :480px. ---------------------------------------------------*/
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+     .em-slider-button {
+         display: block;
+    }
+     .em-nivo-slider-wrapper .nivo-directionNav {
+         display: block;
+    }
+     .em-button-button-area a {
+         margin-right: 5px;
+         margin-top: 15px;
+         padding: 3px 20px;
+         font-size: 12px;
+    }
+    /*=========== banner area 2 css ===============*/
+     .banner-content button {
+         position: absolute;
+    }
+    /* portfolio css */
+     .portfolio_nav ul li {
+         margin: 0 2px 10px;
+    }
+    /* banner area css */
+     .witr_banner_area {
+         height: 600px;
+    }
+     .witr_banner_content.text-right p {
+         width: 92%;
+         margin:auto;
+         font-size:17px;
+    }
+     .witr_banner_content.text-left p {
+         width: 92%;
+         margin:auto;
+         font-size:17px;
+    }
+    /* section_title */
+     .witr_section_title_inner h1, .witr_section_title_inner h2, .witr_section_title_inner h3 {
+         font-size: 25px;
+    }
+     .witr_section_title_inner.text-center p, .witr_section_title_inner.text-left p, .witr_section_title_inner.text-right p {
+         width: 91%;
+    }
+    /* text_widget css */
+     .witr_text_widget_inner p, .about-content span{
+         font-size: 17px !important;
+    }
+    /* blog css */
+     .blog-part {
+         text-align: center;
+    }
+    /* Screenshots css */
+     .dnSlide-main.done {
+         -webkit-transform: scale(0.7);
+         transform: scale(0.7);
+         margin-left: -196px;
+    }
+     .Screenshots-fearm img {
+         width: 256% !important;
+         max-width: 256% !important;
+         left: -98px;
+         top: 49px;
+    }
+     .liton-header-top {
+         display:block;
+    }
+	.witr_feature_13 .sub-item::after, .witr_feature_13 .sub-item:before {
+		top: 53%;
+	}
+	/* about page about */
+	.about_page_area_about .all_color_service {
+		padding: 33px 9px 50px;
+	}
+		.home2_togole_area .liton_button.no_margin {
+		margin-top: 0;
+		width: 38%;
+	}
+}
+/* menu and logo show & hide */
+ @media (min-width: 10px) and (max-width: 991px){
+     .mobile-menu{
+         display:block !important;
+    }
+     .mobile_logo_area{
+         display:block !important;
+    }
+     .liton-main-menu{
+         display:none !important;
+    }
+     .d_md_none{
+         display:none !important;
+    }
+     .em-feature {
+         margin-bottom: 20px;
+    }
+     .single_counter {
+         margin-bottom: 20px;
+    }
+}
+ @media (min-width: 10px) and (max-width: 991px){
+     .text_m_center{
+         text-align:center !important;
+    }
+     .text_m_right{
+         text-align:right !important;
+    }
+     .text_m_left{
+         text-align:right !important;
+    }
+     .menu_18.top-address p span {
+         font-size: 13px;
+    }
+     .footer-top-inner p {
+         width: 85%;
+    }
+     .witr_joined .witr_con_btn2 .w_btn2 {
+         position: inherit;
+         width: 100%;
+    }
+}
+ @media (min-width: 10px) and (max-width: 768px){
+     .ps_absulate{
+         position: inherit !important;
+    }
+     .psc_absolute{
+         position: inherit !important;
+    }
+}
+ @media (min-width: 570px) and (max-width: 767px){
+     .text_s_center{
+         text-align:center !important;
+    }
+     .text_s_right{
+         text-align:right !important;
+    }
+     .text_s_left{
+         text-align:right !important;
+    }
+     .footer-top-inner p {
+         width: 95%;
+    }
+}
+ @media (min-width: 10px) and (max-width: 570px){
+     .liton-header-top{
+         display:none;
+    }
+}
+ 
