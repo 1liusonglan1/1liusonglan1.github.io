@@ -16,22 +16,6 @@
 - jQuery
 - Bootstrap 4.3.1
 
-## 文件结构
-
-```
-index.html       # 主页面文件
-README.md        # 项目说明文档
-css/
-  style.css      # 自定义样式
-  responsive.css # 响应式样式
-js/
-  modernizr-2.8.3.min.js # Modernizr库
-  bootstrap.min.js       # Bootstrap JS
-images/
-  logo.png       # 网站logo
-  slider.jpg     # 首页背景图
-  bar.png        # 技能条图标
-```
 
 ## 功能特点
 
