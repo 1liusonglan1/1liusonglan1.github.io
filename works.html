@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>作品</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(27, 27, 27);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .rectangle {
+            padding: 50px 50px;
+            background: hsl(0, 0%, 32%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(148, 148, 148, 0.3);
+            margin: 0 auto 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            min-width: 300px;
+        }
+
+        .rectangle:hover {
+            background: hsl(0, 0%, 55%);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(197, 196, 196, 0.3);
+        }
+
+        .disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .disabled:hover {
+            transform: none;
+            box-shadow: 0 8px 24px rgba(148, 148, 148, 0.3);
+        }
+
+        .main {
+            /* 居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>
+            <span style="color: #ffffff;">作品</span>
+        </h1>
+    </div>
+    <div class="main">
+        <img src="bar.png">
+        </img>
+    </div>
+    <div class="container">
+        <!-- 第一个矩形 - 点击跳转到 TanexScript.html -->
+        <a href="tanex_script_website/TanexScript.html" class="rectangle">
+            Tanex Script
+        </a>
+        <!-- 第二个矩形 - 敬请期待，不跳转 -->
+        <div class="rectangle disabled">
+            敬请期待
+        </div>
+    </div>
+</body>
+<footer>
+    <p>
+        <span style="color: #A0A0A0;">
+            <a href="index.html">
+                返回主页
+            </a>
+        </span>
+    </p>
+</footer>
+</html>
