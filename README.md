@@ -1,1 +1,232 @@
-# 1liusonglan1.github.io
+# 🐿️ 松鼠星球 - Squirrel Planet
+
+> 代码与艺术缠绕的魔法秘境
+
+## 📖 项目简介
+
+松鼠星球是一个充满创意的团队网站，展示「代码囤积者」的终极巢穴。我们相信代码不仅仅是工具，更是实现梦想的魔法棒。我们不按常理出牌，但我们的作品绝对有用；我们充满奇思妙想，但每一个项目都经过精心打磨。
+
+**核心理念**：写奇奇怪怪但有用的东西，用代码实现梦想。
+
+## ✨ 主要特性
+
+### 🎨 视觉设计
+
+- **橙色主色调** - 采用温暖的橙色系（#FF8C00）搭配深色背景，营造科技感与创意的完美平衡
+- **渐变色彩系统** - 包含橙色、金色、代码绿、紫色等丰富配色
+- **玻璃拟态效果** - 卡片设计采用半透明背景与模糊效果
+- **霓虹发光特效** - Logo 和关键元素带有发光阴影效果
+- **流畅动画** - 元素淡入上移、悬停放大、弹跳效果等
+
+### 📱 响应式设计
+
+完美适配各种设备：
+
+- 桌面端（1200px+）
+- 平板端（768px - 1199px）
+- 移动端（< 768px）
+
+### 🖥️ 页面结构
+
+1. **加载页面** - 量子纠缠链接动画
+2. **英雄区** - Logo、标题、代码展示、CTA 按钮
+3. **星球故事** - 6 张创意故事卡片
+4. **核心理念** - 「写奇奇怪怪但有用的东西」座右铭
+5. **项目展示** - Tanex Script、New Bee Lang 项目入口
+6. **页脚** - 品牌信息、导航链接
+
+## 📁 文件结构
+
+```文件结构
+squirrel-planet/
+├── dist/                    # 部署目录（上线用）
+│   ├── index.html          # 主页面
+│   └── logo.png            # Logo 图片
+├── index.html              # 开发版源代码
+├── logo.png                # 开发版 Logo
+├── test.js                 # Playwright 测试脚本
+├── package.json            # 项目配置
+└── README.md               # 说明文档
+```
+
+## 🚀 部署指南
+
+### 方式一：简单部署（推荐）
+
+只需要 `dist/` 目录中的 2 个文件：
+
+```bash
+# 复制文件到服务器
+cp dist/* /var/www/html/
+```
+
+### 方式二：静态托管平台
+
+支持以下平台，直接上传 `dist/` 目录即可：
+
+- ✅ Vercel
+- ✅ Netlify
+- ✅ GitHub Pages
+- ✅ 阿里云 OSS
+- ✅ 腾讯云 COS
+- ✅ 任何 Web 服务器（Nginx/Apache）
+
+### 方式三：Vercel 快速部署
+
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
+
+# 进入部署目录
+cd dist
+
+# 部署
+vercel
+```
+
+## 🔧 自定义修改
+
+### 修改项目链接
+
+当您的项目准备好后，修改 `index.html` 中的项目按钮链接：
+
+```html
+<!-- 找到这两个按钮，修改 href 属性 -->
+<a href="https://your-tanex-script-url.com" class="project-btn">
+    访问项目 <span class="arrow">→</span>
+</a>
+
+<a href="https://your-new-bee-lang-url.com" class="project-btn">
+    访问项目 <span class="arrow">→</span>
+</a>
+```
+
+### 修改站点标题
+
+```html
+<!-- 在 index.html 中搜索并修改 -->
+<title>松鼠星球 | 代码与艺术缠绕的魔法秘境</title>
+```
+
+### 修改品牌文字
+
+```html
+<!-- 导航栏品牌 -->
+<div class="nav-logo">
+    <img src="logo.png" alt="松鼠星球 Logo">
+    <span>松鼠星球</span>
+</div>
+
+<!-- 页脚品牌 -->
+<div class="footer-logo">
+    <img src="logo.png" alt="松鼠星球 Logo">
+    <span>松鼠星球</span>
+</div>
+```
+
+### 修改配色方案
+
+在 CSS 顶部 `:root` 变量中修改：
+
+```css
+:root {
+    --orange-primary: #FF8C00;    /* 主橙色 */
+    --orange-light: #FFA500;      /* 浅橙色 */
+    --orange-dark: #FF6B00;       /* 深橙色 */
+    --orange-glow: #FFB347;       /* 发光色 */
+    --bg-dark: #0D1117;           /* 背景色 */
+    --bg-card: #161B22;           /* 卡片背景 */
+    --text-light: #F0F6FC;        /* 文字色 */
+    --text-dim: #8B949E;          /* 次要文字 */
+    --code-green: #00FF9D;        /* 代码绿色 */
+    --accent-purple: #A855F7;     /* 紫色点缀 */
+    --accent-pink: #EC4899;       /* 粉色点缀 */
+}
+```
+
+### 添加/删除页面区块
+
+注释掉的代码示例（团队成员区块）：
+
+```html
+<!-- Team Section - Disabled -->
+<!--
+<section class="team-section" id="team">
+    ...
+</section>
+-->
+```
+
+如需启用，取消注释即可。
+
+## 📦 技术栈
+
+- **HTML5** - 结构标记
+- **CSS3** - 样式与动画（无外部 CSS 框架）
+- **JavaScript** - 交互功能
+- **FontSource** - 思源黑体、站酷酷黑体
+- **Playwright** - 测试框架
+
+### 使用字体
+
+- **思源黑体 (Noto Sans SC)** - 正文字体
+- **站酷酷黑体 (ZCOOL QingKe HuangYou)** - 展示标题
+
+字体通过 jsDelivr CDN 加载，国内可正常访问。
+
+## 🧪 测试
+
+项目包含 Playwright 测试脚本：
+
+```bash
+# 运行测试
+cd squirrel-planet
+node test.js
+```
+
+测试内容包括：
+
+- 页面加载验证
+- 关键元素检查
+- 按钮交互测试
+- CSS 动画验证
+- 控制台错误检测
+
+## 🎨 资源引用
+
+### Logo 图片
+
+- 文件：`logo.png`
+- 用途：导航栏、英雄区、加载页、页脚、浏览器图标
+- 推荐尺寸：正方形，建议 512x512 以上
+
+### 外部资源
+
+- 字体：jsDelivr CDN（国内可访问）
+- 图标：使用 CSS/HTML 实体，无需额外图片
+
+## 📄 开源协议
+
+本项目采用 MIT 协议开源，您可以自由使用、修改和分发，但请保留原始版权声明。
+
+## 🤝 贡献
+
+欢迎以下形式的贡献：
+
+- 🐛 Bug 报告与修复
+- ✨ 新功能建议
+- 📝 文档改进
+- 🎨 设计优化
+
+## 📞 联系
+
+- **网站** 1liusonglan1.github.io
+- **项目** Tanex Script、New Bee Lang
+
+---
+
+### 结尾
+
+结尾: **🐿️ 用代码编织梦想，用创意点亮星空**
+
+*写奇奇怪怪但有用的东西，让世界变得更有趣！*
