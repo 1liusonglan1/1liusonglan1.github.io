@@ -612,16 +612,44 @@
             box-shadow: 0 15px 40px rgba(255, 140, 0, 0.4);
         }
 
-        .project-btn.disabled {
-            background: var(--bg-dark);
-            border: 1px solid var(--text-dim);
-            color: var(--text-dim);
-            cursor: not-allowed;
+        .project-btn:active {
+            transform: translateY(-1px) scale(0.98);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
         }
 
-        .project-btn.disabled:hover {
-            transform: none;
-            box-shadow: none;
+        /* Ripple Effect */
+        .project-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .project-btn:active::after {
+            width: 300px;
+            height: 300px;
+            opacity: 1;
+            transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+        }
+
+        .project-btn.clicked::after {
+            opacity: 0;
+            width: 300px;
+            height: 300px;
+            transition: opacity 0.3s ease 0.2s;
         }
 
         .project-btn .arrow {
@@ -630,6 +658,30 @@
 
         .project-btn:hover .arrow {
             transform: translateX(5px);
+        }
+
+        /* Button shine animation */
+        @keyframes btnShine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        .project-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transform: skewX(-15deg);
+            animation: btnShine 3s ease-in-out infinite;
+            pointer-events: none;
         }
 
         /* Team Section */
@@ -1154,7 +1206,7 @@
                     <li>强大的扩展能力，满足定制需求</li>
                     <li>活跃的社区，持续迭代更新</li>
                 </ul>
-                <a href="#" class="project-btn disabled" onclick="alert('项目正在筹备中，敬请期待！'); return false;">
+                <a href="1.html" class="project-btn">
                     访问项目 <span class="arrow">→</span>
                 </a>
             </div>
@@ -1167,8 +1219,8 @@
                     <span class="tag">蜜蜂主题</span>
                 </div>
                 <p>
-                    为初学者设计的友好编程语言，让每个人都能轻松踏入编程的世界。
-                    从零开始，用最温柔的方式带你领略代码的魅力。
+                    折磨觉得编程简单的人，用一只蜂蜜，折磨无数程序员。
+                    打破传统编程语言的束缚，用蜂蜜的方式表达复杂逻辑。
                 </p>
                 <ul class="project-features">
                     <li>语法简洁直观，零基础友好</li>
@@ -1176,7 +1228,7 @@
                     <li>强大的错误提示，助你快速成长</li>
                     <li>活跃的社区，新手也能找到导师</li>
                 </ul>
-                <a href="#" class="project-btn disabled" onclick="alert('项目正在筹备中，敬请期待！'); return false;">
+                <a href="2.html" class="project-btn">
                     访问项目 <span class="arrow">→</span>
                 </a>
             </div>
@@ -1201,7 +1253,6 @@
                     <li><a href="#story">星球故事</a></li>
                     <li><a href="#philosophy">核心理念</a></li>
                     <li><a href="#projects">项目展示</a></li>
-                    <!-- <li><a href="#team">团队成员</a></li> -->
                 </ul>
             </div>
             <div>
@@ -1224,7 +1275,7 @@
         <div class="footer-bottom">
             <p>
                 <span class="squirrel">🐿️</span>
-                © 2024 松鼠星球 | 用代码编织梦想，用创意点亮星空
+                © 2026 松鼠星球 | 用代码编织梦想，用创意点亮星空
                 <span class="squirrel">🐿️</span>
             </p>
         </div>
@@ -1342,6 +1393,55 @@
                 }
             });
         }
+        // Button Click Animation
+        function setupButtonAnimations() {
+            const buttons = document.querySelectorAll('.project-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    // Add clicked class for ripple effect
+                    this.classList.add('clicked');
+                    
+                    // Create particles on click
+                    createButtonParticles(e.clientX, e.clientY);
+                    
+                    // Remove class after animation
+                    setTimeout(() => {
+                        this.classList.remove('clicked');
+                    }, 400);
+                });
+            });
+        }
+        // Create particles on button click
+        function createButtonParticles(x, y) {
+            const colors = ['#FF8C00', '#FFA500', '#FFB347', '#00FF9D', '#A855F7'];
+            for (let i = 0; i < 8; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: fixed;
+                    left: ${x}px;
+                    top: ${y}px;
+                    width: ${Math.random() * 8 + 4}px;
+                    height: ${Math.random() * 8 + 4}px;
+                    background: ${colors[Math.floor(Math.random() * colors.length)]};
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 9999;
+                    transform: translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 0.5) * 100}px);
+                    opacity: 1;
+                    transition: all 0.5s ease-out;
+                `;
+                document.body.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.style.transform = `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px) rotate(${Math.random() * 360}deg)`;
+                    particle.style.opacity = '0';
+                }, 10);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 500);
+            }
+        }
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             // createParticles(); // Disabled
@@ -1349,6 +1449,7 @@
             setupNavScroll();
             setupLogoClick();
             setupParallax();
+            setupButtonAnimations();
         });
     </script>
 </body>
