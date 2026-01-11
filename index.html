@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>松鼠星球 | 代码与艺术缠绕的魔法秘境</title>
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
     <link rel="icon" type="image/png" href="logo.png" sizes="192x192">
     <link rel="apple-touch-icon" href="logo.png">
     <meta name="theme-color" content="#FF8C00">
-    
     <!-- 使用国内可访问的字体源 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc/400-900.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/zcool-qingke-huangyou/index.css">
@@ -60,47 +58,6 @@
             background: linear-gradient(180deg, var(--orange-primary), var(--orange-dark));
             border-radius: 5px;
         }
-
-        /* Particle Background - Disabled */
-        /*
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--orange-glow);
-            border-radius: 50%;
-            opacity: 0.6;
-            animation: float 15s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(720deg);
-                opacity: 0;
-            }
-        }
-        */
 
         /* Navigation */
         .nav {
@@ -807,12 +764,6 @@
             object-fit: contain;
             filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.5));
         }
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            display: block;
-        }
 
         .footer-brand p {
             color: var(--text-dim);
@@ -1038,10 +989,6 @@
             <div class="loader-bar"></div>
         </div>
     </div>
-
-    <!-- Particles Background - Disabled -->
-    <!-- <div class="particles" id="particles"></div> -->
-
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-logo">
@@ -1055,7 +1002,6 @@
             <!-- <li><a href="#team">团队成员</a></li> -->
         </ul>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg"></div>
@@ -1069,9 +1015,9 @@
             <div class="hero-code">
 <span class="keyword">const</span> <span class="string">squirrelPlanet</span> = {<br>
 &nbsp;&nbsp;<span class="comment">// 代码与艺术缠绕的魔法秘境</span><br>
-&nbsp;&nbsp;mission: <span class="string">"写奇奇怪怪但有用的东西"</span>,<br>
-&nbsp;&nbsp;status: <span class="string">"用代码实现梦想"</span>,<br>
-&nbsp;&nbsp;welcome: <span class="keyword">true</span><br>
+&nbsp;&nbsp;<span class="string">"mission"</span>: <span class="string">"写奇奇怪怪但有用的东西"</span>,<br>
+&nbsp;&nbsp;<span class="string">"status"</span>: <span class="string">"用代码实现梦想"</span>,<br>
+&nbsp;&nbsp;<span class="string">"welcome"</span>: <span class="keyword">true</span><br>
 };
             </div>
             <div class="hero-cta">
@@ -1083,7 +1029,6 @@
             <span></span>
         </div>
     </section>
-
     <!-- Story Section -->
     <section class="story-section" id="story">
         <h2 class="section-title fade-in">📜 星球故事</h2>
@@ -1147,7 +1092,6 @@
             </div>
         </div>
     </section>
-
     <!-- Philosophy Section -->
     <section class="philosophy-section" id="philosophy">
         <h2 class="section-title fade-in">💡 核心理念</h2>
@@ -1158,9 +1102,7 @@
                 更是实现梦想的魔法棒。我们不按常理出牌，但我们的作品绝对有用；
                 我们充满奇思妙想，但每一个项目都经过精心打磨。
                 <br><br>
-                在这里，<span style="color: var(--orange-primary);">混乱与秩序并存</span>，
-                <span style="color: var(--code-green);">代码与艺术缠绕</span>，
-                <span style="color: var(--accent-purple);">想象力与实用性共舞</span>。
+                在这里，混乱与秩序并存，代码与艺术缠绕，想象力与实用性共舞。
             </p>
             <div class="philosophy-grid">
                 <div class="philosophy-item fade-in">
@@ -1190,7 +1132,6 @@
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
     <section class="projects-section" id="projects">
         <h2 class="section-title fade-in">🚀 现有项目</h2>
@@ -1200,7 +1141,7 @@
                 <h3>Tanex Script</h3>
                 <div>
                     <span class="tag">编程语言</span>
-                    <span class="tag">DSL</span>
+                    <span class="tag">易学</span>
                     <span class="tag">创新</span>
                 </div>
                 <p>
@@ -1222,8 +1163,8 @@
                 <h3>New Bee Lang</h3>
                 <div>
                     <span class="tag">编程语言</span>
-                    <span class="tag">新手上路</span>
-                    <span class="tag">友好</span>
+                    <span class="tag">esoteric lang</span>
+                    <span class="tag">蜜蜂主题</span>
                 </div>
                 <p>
                     为初学者设计的友好编程语言，让每个人都能轻松踏入编程的世界。
@@ -1241,40 +1182,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Team Section - Disabled -->
-    <!--
-    <section class="team-section" id="team">
-        <h2 class="section-title fade-in">👥 团队成员</h2>
-        <div class="team-grid">
-            <div class="team-card fade-in">
-                <div class="team-avatar">🐿️</div>
-                <h3>首席松鼠</h3>
-                <p class="role">创始人 & 首席程序员</p>
-                <p>坚信自己不是仓鼠的神经质仓鼠，擅长把简单问题复杂化，再把复杂问题变得有趣。</p>
-            </div>
-            <div class="team-card fade-in">
-                <div class="team-avatar">🎨</div>
-                <h3>美术祭司</h3>
-                <p class="role">设计总监 & 像素艺术家</p>
-                <p>能用尾巴画蒙娜丽莎的花栗鼠，相信好的设计能让代码更有温度。</p>
-            </div>
-            <div class="team-card fade-in">
-                <div class="team-avatar">🧮</div>
-                <h3>算法使徒</h3>
-                <p class="role">首席架构师</p>
-                <p>解构过 NP 完全问题的图灵松鼠，用数学之美构建系统的骨架。</p>
-            </div>
-            <div class="team-card fade-in">
-                <div class="team-avatar">💡</div>
-                <h3>灵感通灵者</h3>
-                <p class="role">产品经理 & 创意大师</p>
-                <p>脑洞比银河系还大的仓鼠，总能在深夜迸发出改变世界的想法。</p>
-            </div>
-        </div>
-    </section>
-    -->
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -1322,7 +1229,6 @@
             </p>
         </div>
     </footer>
-
     <script>
         // Loading Screen
         window.addEventListener('load', () => {
@@ -1330,32 +1236,26 @@
                 document.getElementById('loader').classList.add('hidden');
             }, 1500);
         });
-
         // Generate Particles
         function createParticles() {
             const container = document.getElementById('particles');
             const particleCount = 50;
-
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.animationDelay = Math.random() * 15 + 's';
                 particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                
                 // Random sizes
                 const size = Math.random() * 4 + 2;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
-                
                 // Random colors
                 const colors = ['#FF8C00', '#FFA500', '#FFB347', '#00FF9D', '#A855F7'];
                 particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-                
                 container.appendChild(particle);
             }
         }
-
         // Scroll Animation Observer
         function setupScrollAnimations() {
             const observer = new IntersectionObserver((entries) => {
@@ -1373,7 +1273,6 @@
                 observer.observe(el);
             });
         }
-
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1387,7 +1286,6 @@
                 }
             });
         });
-
         // Navigation Background on Scroll
         function setupNavScroll() {
             const nav = document.querySelector('.nav');
@@ -1401,7 +1299,6 @@
                 }
             });
         }
-
         // Interactive Logo Click
         function setupLogoClick() {
             const logo = document.getElementById('heroLogo');
@@ -1411,7 +1308,6 @@
                     setTimeout(() => {
                         logo.style.animation = 'bounce 0.5s ease-in-out 3';
                     }, 10);
-                    
                     // Create floating acorns
                     for (let i = 0; i < 5; i++) {
                         const acorn = document.createElement('div');
@@ -1424,12 +1320,10 @@
                         acorn.style.zIndex = '9999';
                         acorn.style.transition = 'all 1s ease-out';
                         document.body.appendChild(acorn);
-
                         setTimeout(() => {
                             acorn.style.transform = `translate(${(Math.random() - 0.5) * 200}px, ${Math.random() * 200 + 100}px) rotate(${Math.random() * 360}deg)`;
                             acorn.style.opacity = '0';
                         }, 10);
-
                         setTimeout(() => {
                             acorn.remove();
                         }, 1000);
@@ -1437,12 +1331,10 @@
                 });
             }
         }
-
         // Parallax Effect for Hero
         function setupParallax() {
             const hero = document.querySelector('.hero');
             const heroBg = document.querySelector('.hero-bg');
-
             window.addEventListener('scroll', () => {
                 const scrolled = window.scrollY;
                 if (scrolled < window.innerHeight) {
@@ -1450,7 +1342,6 @@
                 }
             });
         }
-
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             // createParticles(); // Disabled
