@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="./bee.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Bee Lang - 最甜蜜的编程语言</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --honey-gold: #FFD700;
+            --honey-light: #FFECB3;
+            --dark-bg: #0D0D0D;
+            --card-bg: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --error-red: #FF6B6B;
+            --success-green: #69F0AE;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--honey-gold);
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--honey-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--honey-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, var(--honey-gold), #FFA000);
+            color: var(--dark-bg);
+            padding: 12px 28px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--honey-gold), var(--honey-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--honey-gold), #FFA000);
+            color: var(--dark-bg);
+            padding: 16px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--honey-gold);
+            padding: 14px 36px;
+            border: 2px solid var(--honey-gold);
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--honey-gold);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--honey-gold), var(--honey-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--honey-gold), #FFA000);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            color: var(--dark-bg);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--honey-gold);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Installation Section */
+        .installation {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px auto;
+        }
+
+        .install-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .install-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--honey-gold), #FFA000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #0D0D0D;
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-block code {
+            color: var(--honey-gold);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(255, 215, 0, 0.2);
+            border: none;
+            color: var(--honey-gold);
+            padding: 15px 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+        }
+
+        /* Syntax Section */
+        .syntax-rules {
+            margin: 40px auto;
+        }
+
+        .rules-container {
+            display: grid;
+            gap: 25px;
+        }
+
+        .rule-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 4px solid var(--honey-gold);
+            transition: all 0.3s ease;
+        }
+
+        .rule-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .rule-card h3 {
+            color: var(--honey-gold);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rule-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Commands Section */
+        .commands-section {
+            margin: 40px auto;
+        }
+
+        .command-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            color: var(--text-secondary);
+            padding: 12px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--honey-gold);
+            color: var(--dark-bg);
+            border-color: var(--honey-gold);
+        }
+
+        .command-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .command-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .command-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .command-name {
+            font-family: 'Fira Code', monospace;
+            color: var(--honey-gold);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .command-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Code Examples */
+        .examples-section {
+            margin: 40px auto;
+        }
+
+        .example-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .example-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 12px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .example-btn.active,
+        .example-btn:hover {
+            color: var(--honey-gold);
+        }
+
+        .example-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 20%;
+            height: 3px;
+            background: var(--honey-gold);
+            border-radius: 3px;
+        }
+
+        .code-terminal {
+            background: #0D0D0D;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal-header {
+            background: #1A1A1A;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-dot.red { background: #FF5F56; }
+        .terminal-dot.yellow { background: #FFBD2E; }
+        .terminal-dot.green { background: #27CA40; }
+
+        .terminal-title {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+        .terminal-body {
+            padding: 25px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        .code-line {
+            display: block;
+            white-space: pre;
+        }
+
+        .code-keyword { color: #C792EA; }
+        .code-string { color: #C3E88D; }
+        .code-comment { color: #546E7A; font-style: italic; }
+        .code-function { color: #82AAFF; }
+        .code-number { color: #F78C6C; }
+
+        /* Error Section */
+        .error-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px auto;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .error-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .error-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--error-red), #FF8A80);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .error-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .error-info h3 {
+            color: var(--error-red);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .error-info p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .error-example {
+            background: #0D0D0D;
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            margin-top: 20px;
+            border-left: 4px solid var(--error-red);
+        }
+
+        .error-example .mocking {
+            color: var(--error-red);
+        }
+
+        .error-example .encouragement {
+            color: var(--honey-gold);
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, transparent, rgba(255, 215, 0, 0.05), transparent);
+        }
+
+        .download-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--honey-gold);
+        }
+
+        .download-section p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .download-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            min-width: 280px;
+            transition: all 0.3s ease;
+        }
+
+        .download-card:hover {
+            border-color: var(--honey-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .download-card h3 {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .download-card .version {
+            color: var(--honey-gold);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .download-card .btn-download {
+            background: linear-gradient(135deg, var(--honey-gold), #FFA000);
+            color: var(--dark-bg);
+            padding: 14px 32px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .download-card .btn-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        footer .heart {
+            color: var(--honey-gold);
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .features, .installation, .error-section {
+                padding: 40px 20px;
+            }
+
+            .command-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .error-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Honeycomb Pattern Background */
+        .honeycomb-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FFD700' d='M50 0L100 25L100 75L50 100L0 75L0 25Z'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="honeycomb-bg"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span style="font-size: 2.5rem;">🐝</span>
+            New Bee Lang
+        </div>
+        <ul class="nav-links">
+            <li><a href="#features">核心特性</a></li>
+            <li><a href="#installation">安装指南</a></li>
+            <li><a href="#syntax">语法规则</a></li>
+            <li><a href="#commands">命令参考</a></li>
+            <li><a href="#examples">示例代码</a></li>
+        </ul>
+        <a href="#download" class="download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            下载 New Bee Lang
+        </a>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Bee Lang</h1>
+            <p class="subtitle">警告：本编程语言会让你怀疑人生</p>
+            <p class="hero-description">
+                New Bee Lang 是一门专为折磨程序员而设计的恶搞编程语言。它以蜜蜂为主题，
+                充满了对开发者的无情嘲讽和难以理解的语法规则。如果你想体验被蜜蜂支配的恐惧，
+                欢迎来到 New Bee Lang 的世界！
+            </p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    开始体验
+                </a>
+                <a href="#features" class="btn-secondary">了解更多</a>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-header">
+            <h2>核心特性</h2>
+            <p>New Bee Lang 不仅仅是一门编程语言，它更是一种生活态度</p>
+        </div>
+        <div class="features">
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>强制问候系统</h3>
+                    <p>程序必须以 <code>hello New Bee Lang</code> 开头，以 <code>goodbye New Bee Lang</code> 结尾。忘记问候？蜜蜂们会毫不留情地拒绝执行你的代码，并送上一段尖酸刻薄的批评。</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>plese 语句占比</h3>
+                    <p>你的代码中必须有 40% 到 50% 的代码行是 <code>plese</code> 语句。这是蜜蜂们用来维持世界平衡的方式，也是对你意志力的考验。每写五个语句，就必须插入一个 plese 语句。</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>业界领先的嘲讽系统</h3>
+                    <p>当你的代码出错时，蜜蜂们会打印出精心准备的嘲讽信息，从「这代码比我奶奶的食谱还难懂」到「你的键盘是不是被蜜蜂蜇过」，每一句都直击心灵。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Installation Section -->
+    <section id="installation">
+        <div class="section-header">
+            <h2>安装指南</h2>
+            <p>只需一个 Python 解释器，即可开始你的噩梦之旅</p>
+        </div>
+        <div class="installation">
+            <div class="install-steps">
+                <div class="install-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>下载 New Bee Lang 解释器</h4>
+                        <p>下载 New Bee Lang 解释器到你的本地目录。你需要确保 <code>New_Bee_Lang.py</code> 文件存在于你的工作目录中。</p>
+                    </div>
+                </div>
+                <div class="install-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>运行你的程序</h4>
+                        <p>使用以下命令运行你的 New Bee Lang 程序：</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                            <code>python New_Bee_Lang.py your_program.nbl</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Syntax Rules Section -->
+    <section id="syntax">
+        <div class="section-header">
+            <h2>语法规则</h2>
+            <p>通往成功的必经之路，请仔细阅读</p>
+        </div>
+        <div class="syntax-rules">
+            <div class="rules-container">
+                <div class="rule-card animate-on-scroll">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        强制性问候与告别
+                    </h3>
+                    <p>每一个 New Bee Lang 程序都必须以 <code>hello New Bee Lang</code> 开头，以 <code>goodbye New Bee Lang</code> 结尾。这些语句必须一字不差，包括大小写。忘记问候？程序拒绝运行。忘记告别？程序拒绝运行。蜜蜂们对礼仪的要求就是这么严格。</p>
+                </div>
+                <div class="rule-card animate-on-scroll">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        plese 语句占比
+                    </h3>
+                    <p><code>plese</code> 语句必须占所有有效代码行的 40% 到 50%。如果低于 40%，蜜蜂们会认为你不够礼貌。如果高于 50%，蜜蜂们会认为你只会说「请」而不会做实事。此外，<strong>不能连续出现超过 5 行非 plese 语句</strong>。</p>
+                </div>
+                <div class="rule-card animate-on-scroll">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 7 4 4 20 4 20 7"/>
+                            <line x1="9" y1="20" x2="15" y2="20"/>
+                            <line x1="12" y1="4" x2="12" y2="20"/>
+                        </svg>
+                        有效字符限制
+                    </h3>
+                    <p>New Bee Lang 只接受字母、数字和空格作为有效字符。这意味着你不能使用标点符号、括号、引号等任何其他字符。如果你胆敢使用这些「非法字符」，蜜蜂们会打印出一段专门针对该字符的嘲讽。唯一允许使用特殊字符的地方是在 <code>set value</code> 命令和 <code>error</code> 命令中。</p>
+                </div>
+                <div class="rule-card animate-on-scroll">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        注释支持
+                    </h3>
+                    <p>New Bee Lang 支持行内注释，使用 <code>#</code> 符号标记。<code>#</code> 之后的所有内容都将被视为注释，不会被解释执行。但请注意，<code>#</code> 符号本身不能出现在其他上下文中，它只用于注释。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Commands Reference Section -->
+    <section id="commands">
+        <div class="section-header">
+            <h2>命令参考</h2>
+            <p>每个命令都与蜜蜂的生活习性相关，请仔细阅读</p>
+        </div>
+        <div class="commands-section">
+            <div class="command-tabs">
+                <button class="tab-btn active" onclick="showCommandTab('basic')">基础操作</button>
+                <button class="tab-btn" onclick="showCommandTab('value')">数值设置</button>
+                <button class="tab-btn" onclick="showCommandTab('arithmetic')">算术运算</button>
+                <button class="tab-btn" onclick="showCommandTab('control')">程序控制</button>
+            </div>
+            <div id="basic-commands" class="command-grid">
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">init honeycomb</div>
+                    <div class="command-desc">初始化蜂巢，创建包含蜂后（queen bee）的蜂巢栈。每个程序的起点。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">call</div>
+                    <div class="command-desc">从蜂巢中取出一项，放入工作区。通常用于取出蜂巢顶部的蜜蜂。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">lay egg</div>
+                    <div class="command-desc">在工作区中的蜂后产下一枚卵。要求工作区顶部必须是蜂后。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">sleep</div>
+                    <div class="command-desc">让蜂巢顶部的蜜蜂成长。卵→幼蜂→普通蜜蜂</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">kill</div>
+                    <div class="command-desc">移除蜂巢顶部的蜜蜂。但不能移除蜂后，否则程序立即终止。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">all kill</div>
+                    <div class="command-desc">清空整个蜂巢。不可逆的操作，请三思而后行。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">all sleep</div>
+                    <div class="command-desc">让蜂巢中所有的卵和幼蜂成长一次。批量操作节省时间。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">go back</div>
+                    <div class="command-desc">将工作区顶部的蜜蜂放回蜂巢。保持蜂巢的秩序。</div>
+                </div>
+            </div>
+            <div id="value-commands" class="command-grid" style="display: none;">
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">set job worker bee</div>
+                    <div class="command-desc">将蜂巢顶部的普通蜜蜂设置为工蜂。工蜂可以执行各种计算任务。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">set value 'X'</div>
+                    <div class="command-desc">为蜂巢顶部的蜜蜂设置一个单字符值。值必须用单引号包裹。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">set value input</div>
+                    <div class="command-desc">通过输入为蜂巢顶部的蜜蜂设置一个单字符值。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">output</div>
+                    <div class="command-desc">输出蜂巢顶部蜜蜂的值。如果该蜜蜂没有值，程序会报错。</div>
+                </div>
+            </div>
+            <div id="arithmetic-commands" class="command-grid" style="display: none;">
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">plus</div>
+                    <div class="command-desc">加法运算。蜂巢顶部两个数字相加，结果以新蜜蜂形式压入蜂巢。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">reduce</div>
+                    <div class="command-desc">减法运算。蜂巢顶部两个数字相减（第一个减第二个）。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">ride</div>
+                    <div class="command-desc">乘法运算。蜂巢顶部两个数字相乘。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">except</div>
+                    <div class="command-desc">整除运算。蜂巢顶部两个数字相除并取整。</div>
+                </div>
+            </div>
+            <div id="control-commands" class="command-grid" style="display: none;">
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">loop start / loop end</div>
+                    <div class="command-desc">循环结构。循环体内的代码会被重复执行。需配合 break 使用。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">break</div>
+                    <div class="command-desc">跳出当前循环。立即终止最内层的循环。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">judgment start / judgment end</div>
+                    <div class="command-desc">条件判断结构。检查蜂巢顶部蜜蜂的值是否为真。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">give up</div>
+                    <div class="command-desc">立即终止程序。打印告别信息并以错误码退出。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">error</div>
+                    <div class="command-desc">主动触发错误。允许「自定义」错误信息，但仍然终止程序。</div>
+                </div>
+                <div class="command-item animate-on-scroll">
+                    <div class="command-name">plese</div>
+                    <div class="command-desc">最独特的命令。表示「礼貌地请求」执行该命令。每5个命令必须插入一个。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Examples Section -->
+    <section id="examples">
+        <div class="section-header">
+            <h2>示例代码</h2>
+            <p>从 Hello World 开始你的噩梦之旅</p>
+        </div>
+        <div class="examples-section">
+            <div class="example-tabs">
+                <button class="example-btn active" onclick="showExample('hello')">Hello World</button>
+                <button class="example-btn" onclick="showExample('loop')">循环示例</button>
+                <button class="example-btn" onclick="showExample('judgment')">判断示例</button>
+            </div>
+            <div class="code-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">New Bee Lang</span>
+                </div>
+                <div class="terminal-body" id="code-display">
+                    <span class="code-line code-keyword">hello New Bee Lang</span> <span class="code-comment"># 必须问候</span>
+<span class="code-line code-function">init honeycomb</span> <span class="code-comment"># 必须初始化，这一步完后的蜂巢 [&lt;queen bee&gt;]</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">call</span> <span class="code-comment"># 把栈最后一项召唤到工作区</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">lay egg</span> <span class="code-comment"># 如果工作区最后的是 queen bee，则往蜂巢内加入 egg</span>
+<span class="code-line code-function">sleep</span> <span class="code-comment"># 蜂巢最后的睡觉 (egg -> young bee)</span>
+<span class="code-line code-function">sleep</span> <span class="code-comment"># (young bee -> bee)</span>
+<span class="code-line code-function">set job bee</span> <span class="code-comment"># 设置蜂巢最后的职业: 普通蜜蜂</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'H'</span> <span class="code-comment"># 设置蜂巢最后的值</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span> <span class="code-comment"># 输出蜂巢最后的值</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'e'</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">'l'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">'o'</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">' '</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'W'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'o'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'r'</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'l'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'d'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">go back</span> <span class="code-comment"># 让 queen bee 返回蜂巢</span>
+<span class="code-line code-keyword">goodbye New Bee Lang</span> <span class="code-comment"># 必须问候</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Error Section -->
+    <section class="error-section">
+        <div class="section-header">
+            <h2>错误处理</h2>
+            <p>当你犯错时（这是必然会发生的），系统会打印出一段精心设计的嘲讽信息</p>
+        </div>
+        <div class="error-content animate-on-scroll">
+            <div class="error-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="15" y1="9" x2="9" y2="15"/>
+                    <line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+            </div>
+            <div class="error-info">
+                <h3>嘲讽系统</h3>
+                <p>错误信息通常包含随机选择的嘲讽语，如「这代码比我奶奶的食谱还难懂！」或「如果代码能哭，它现在正在嚎啕大哭。」这些话语旨在让你感到自己的渺小和无能。</p>
+                <p>然后是具体的错误描述，指出你在哪里犯了什么错误。最后是一段「鼓励」话语，如「继续加油！你快要理解了... 才怪！」</p>
+                <div class="error-example">
+                    <span class="code-line code-mocking mocking">这代码比我奶奶的食谱还难懂！</span>
+<span class="code-line">位置: 第 15 行</span>
+<span class="code-line">操作: set value "ab"</span>
+<span class="code-line code-mocking mocking">value 必须是单个字符！</span>
+<span class="code-line code-encouragement encouragement">继续加油！你快要理解了... 才怪！</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <h2>下载 New Bee Lang</h2>
+        <p>准备好迎接挑战了吗？</p>
+        <div class="download-options">
+            <div class="download-card animate-on-scroll">
+                <h3>最新版本</h3>
+                <p class="version">v1.0.0</p>
+                <button class="btn-download" onclick="downloadFile()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    下载 New_Bee_Lang.py
+                </button>
+            </div>
+            <div class="download-card animate-on-scroll">
+                <h3>示例程序</h3>
+                <p class="version">Hello World!</p>
+                <button class="btn-download" onclick="downloadExample()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    下载示例代码
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>Made with <span class="heart">❤</span> by Bees</p>
+        <p>© 2026 New Bee Lang. 祝你「好运」！</p>
+    </footer>
+    <script>
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        // Copy Code Function
+        function copyCode(btn) {
+            const codeBlock = btn.parentElement;
+            const code = codeBlock.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = btn.textContent;
+                btn.textContent = '已复制！';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+        // Command Tabs
+        function showCommandTab(tabName) {
+            // Hide all command grids
+            document.querySelectorAll('.command-grid').forEach(grid => {
+                grid.style.display = 'none';
+            });
+            // Show selected grid
+            const selectedGrid = document.getElementById(tabName + '-commands');
+            if (selectedGrid) {
+                selectedGrid.style.display = 'grid';
+            }
+            // Update active tab
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        // Example Tabs
+        const examples = {
+            hello: `<span class="code-line code-keyword">hello New Bee Lang</span> <span class="code-comment"># 必须问候</span>
+<span class="code-line code-function">init honeycomb</span> <span class="code-comment"># 必须初始化，这一步完后的蜂巢 [&lt;queen bee&gt;]</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">call</span> <span class="code-comment"># 把栈最后一项召唤到工作区</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">lay egg</span> <span class="code-comment"># 如果工作区最后的是 queen bee，则往蜂巢内加入 egg</span>
+<span class="code-line code-function">sleep</span> <span class="code-comment"># 蜂巢最后的睡觉 (egg -> young bee)</span>
+<span class="code-line code-function">sleep</span> <span class="code-comment"># (young bee -> bee)</span>
+<span class="code-line code-function">set job bee</span> <span class="code-comment"># 设置蜂巢最后的职业: 普通蜜蜂</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'H'</span> <span class="code-comment"># 设置蜂巢最后的值</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span> <span class="code-comment"># 输出蜂巢最后的值</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'e'</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">'l'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">'o'</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">' '</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'W'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'o'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'r'</span>
+<span class="code-line code-keyword">plese</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'l'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">set value</span> <span class="code-string">'d'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">output</span>
+<span class="code-line code-function">go back</span> <span class="code-comment"># 让 queen bee 返回蜂巢</span>
+<span class="code-line code-keyword">goodbye New Bee Lang</span> <span class="code-comment"># 必须问候</span>`,
+            loop: `<span class="code-line code-keyword">hello New Bee Lang</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">init honeycomb</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">call</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">lay egg</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set job bee</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">'5'</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">lay egg</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set job worker bee</span>
+<span class="code-line code-function">call</span>
+<span class="code-line code-keyword">loop start</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">break</span>
+<span class="code-line code-keyword">loop end</span>
+<span class="code-line code-keyword">goodbye New Bee Lang</span>`,
+            judgment: `<span class="code-line code-keyword">hello New Bee Lang</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">init honeycomb</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">call</span>
+<span class="code-line code-function">lay egg</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set job worker bee</span>
+<span class="code-line code-function">call</span>
+<span class="code-line code-function">lay egg</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">sleep</span>
+<span class="code-line code-function">sleep</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set job bee</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">set value</span> <span class="code-string">'1'</span>
+<span class="code-line code-keyword">judgment start</span>
+<span class="code-line code-function">output</span>
+<span class="code-line code-keyword">plese</span> <span class="code-function">judgment end</span>
+<span class="code-line code-keyword">goodbye New Bee Lang</span>`
+        };
+        function showExample(exampleName) {
+            document.getElementById('code-display').innerHTML = examples[exampleName];
+            document.querySelectorAll('.example-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        // Download Functions
+        function downloadFile() {
+            const content = `import sys
+import random
+
+def error(message_list):
+    if message_list:
+
+        def get_content(value, level = 0):
+            content = ''
+            for s in value:
+                if isinstance(s, str):
+                    content += f'\\n{level * '  '}·{s}'
+                else:
+                    content += get_content(s, level + 1)
+            return content
+
+        content = get_content(message_list)
+        print(f'\\n\\033[31m{content}\\033[0m\\n')
+    sys.exit(1)
+
+class new_bee_lang_interpreter:
+
+    def __init__(self):
+        self.honeycomb_stack = []
+        self.workspace_stack = []
+        self.line_number = 0
+        self.plese_count = 0
+        self.statement_count = 0
+        self.loop_stack = []
+        self.judgment_stack = []
+        self.loop_codes = {}
+        self.current_loop_body = []
+        self.queen_bee = None
+        self.encouragements = [
+            '继续加油！你快要理解了... 才怪！',
+            '哇！你又执行了一条指令！真是个天才！',
+            '你知道吗？你正在成为 New Bee Lang 专家的道路上... 走向深渊。',
+            '你的代码正在运行，虽然结果是错误的。',
+            '如果疼痛是学习的一部分，你现在已经是博士了。',
+            '蜜蜂们为你的坚持感到骄傲（真的吗？）。',
+            '你确定你想继续吗？还没有人能完整写出这个程序呢。',
+            '这个错误是为你特别准备的！',
+            '你的咖啡还够吗？因为你会需要很多。',
+            '有时候我怀疑你是不是故意的。'
+        ]
+        self.mocking_messages = {
+            'syntax': [
+                '这代码比我奶奶的食谱还难懂！',
+                '如果代码能哭，它现在正在嚎啕大哭。',
+                '这不只是错误，这是对编程艺术的侮辱！',
+                '你的键盘是不是被蜜蜂蜇过？'
+            ],
+            'runtime': [
+                '/runtime_error: 你的人生选择正在受到质疑/',
+                '这只蜜蜂迷路了，就像你的代码逻辑一样。',
+                '错误 404：你的代码逻辑未找到。',
+                '这不是 bug，这是你代码的特色。'
+            ]
+        }
+
+    def get_random_encouragement(self):
+        return random.choice(self.encouragements)
+
+    def get_random_mocking(self, error_type = 'syntax'):
+        return random.choice(self.mocking_messages[error_type])
+
+    def error_with_details(self, message_list, operation = None, position = None, char = None):
+        full_message = [self.get_random_mocking()]
+        for msg in message_list:
+            full_message.append(msg)
+        if char:
+            insults = [
+                f'你在干什么？！字符 “{char}” 不允许使用！',
+                f'你脑子里有蜜蜂吗？“{char}” 不是有效的 New Bee Lang 字符！',
+                f'我没想到有人会笨到使用 “{char}”，但你做到了！',
+                f'“{char}” - 这个字符不属于我们的语言！你完了！'
+            ]
+            full_message.append(random.choice(insults))
+            full_message.append(f'位置: {position}')
+            full_message.append('有效字符: 字母 数字 空格 (character类型里填的除外)')
+            full_message.append(f'你使用的: “{char}” (真是个天才选择呢)')
+        if position and not char:
+            full_message.append(f'位置: {position}')
+        if operation:
+            full_message.append(f'操作: {operation}')
+            if operation not in ['init honeycomb']:
+                full_message.append(f'当前栈深度: {len(self.honeycomb_stack)}')
+        full_message.append(self.get_random_encouragement())
+        error(['错误', full_message, '程序执行失败，蜜蜂们表示遗憾（并没有）'])
+
+    def parse_code(self, code):
+        lines = code.strip().split('\\n')
+        self.line_number = len(lines)
+        first_line = ''
+        for line in lines:
+            stripped = line.strip()
+            if stripped and not stripped.startswith('#'):
+                first_line = stripped.lower()
+                break
+        last_line = ''
+        for line in reversed(lines):
+            stripped = line.strip()
+            if stripped and not stripped.startswith('#'):
+                last_line = stripped.lower()
+                break
+        if not first_line:
+            self.error_with_details([
+                '文件是空的！没有代码可以执行！',
+                '这是 New Bee Lang 的基本礼仪！',
+                '至少需要 hello New Bee Lang 来开始！'
+            ])
+        if 'hello new bee lang' not in first_line:
+            self.error_with_details([
+                '你没有打招呼！程序必须以 hello New Bee Lang (一字不差) 开头！',
+                '这是 New Bee Lang 的基本礼仪！',
+                '没有问候，就没有代码运行!',
+                '请在你的代码开头添加: hello New Bee Lang',
+                'P.S. 蜜蜂们不会欢迎粗鲁的程序员！'
+            ])
+        if not last_line:
+            self.error_with_details([
+                '文件是空的！没有代码可以执行！',
+                '这是 New Bee Lang 的基本礼仪！',
+                '至少需要 goodbye New Bee Lang 来结束！'
+            ])
+        if 'goodbye new bee lang' not in last_line:
+            self.error_with_details([
+                '你没有告别！程序必须以 goodbye New Bee Lang (一字不差) 结尾！',
+                '这是 New Bee Lang 的基本礼仪！',
+                '没有告别，蜜蜂们会伤心的！',
+                '请在你的代码结尾添加: goodbye New Bee Lang',
+                'P.S. 蜜蜂们期待你的下次光临（并不）！'
+            ])
+        plese_lines = 0
+        total_lines = 0
+        for line in lines:
+            stripped = line.strip()
+            if stripped and not stripped.startswith('#'):
+                total_lines += 1
+                if stripped.lower().startswith('plese'):
+                    plese_lines += 1
+        if total_lines > 0:
+            plese_ratio = plese_lines / total_lines
+            if plese_ratio < 0.40 or plese_ratio > 0.50:
+                self.error_with_details([
+                    'plese 语句占比不正确！',
+                    f'当前 plese 占比: {plese_ratio * 100:.1f}%',
+                    '要求: 40% ~ 50%',
+                    '蜜蜂们不喜欢不守规矩的程序员！'
+                ])
+        non_plese_count = 0
+        for line in lines:
+            stripped = line.strip()
+            if stripped and not stripped.startswith('#'):
+                if stripped.lower().startswith('plese'):
+                    non_plese_count = 0
+                else:
+                    non_plese_count += 1
+                    if non_plese_count >= 5:
+                        self.error_with_details([
+                            '蜜蜂们放弃了！',
+                            '每5句代码必须加一个 plese 语句！',
+                            '蜜蜂们不喜欢偷懒的程序员！'
+                        ])
+        for i, line in enumerate(lines, 1):
+            stripped = line.strip()
+            if stripped.startswith('#'):
+                continue
+            if '#' in line and line[line.index('#') - 1] != "'":
+                if line[line.index('#') - 1] != "'":
+                    line = line.split('#')[0]
+            for char in line:
+                if char not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 '\\n" and line[line.index(char) - 1] != "'":
+                    self.error_with_details(
+                        [f'字符 “{char}” 不允许使用'],
+                        position = f'第 {i} 行',
+                        char = char
+                    )
+        return lines
+
+    def execute(self, code):
+        lines = self.parse_code(code)
+        start_index = 1
+        end_index = len(lines) - 1
+        i = start_index
+        while i < end_index:
+            line = lines[i].strip()
+            i += 1
+            if not line or line.startswith('#'):
+                continue
+            self.execute_line(line, i)
+
+    def execute_line(self, line, line_num):
+        if '#' in line and line[line.index('#') - 1] != "'":
+            line = line.split('#')[0].strip()
+        if not line:
+            return
+        if line.lower().split() == ['goodbye', 'new', 'bee', 'lang']:
+            print('\\n程序结束。再见，愚蠢的人类！蜜蜂们要去采蜜了。')
+            sys.exit(0)
+        if line.lower().startswith('plese'):
+            plese_content = line[5:].strip()
+            self.plese_count += 1
+            self.execute_instruction(plese_content, line_num)
+            return
+        self.statement_count += 1
+        self.execute_instruction(line, line_num)
+
+    def parse_tokens(self, instruction):
+        tokens = []
+        current_token = ''
+        in_quotes = False
+        for char in instruction:
+            if char == "'":
+                if in_quotes:
+                    tokens.append("'" + current_token + "'")
+                    current_token = ''
+                    in_quotes = False
+                else:
+                    if current_token:
+                        tokens.append(current_token)
+                    current_token = ''
+                    in_quotes = True
+            elif char == ' ' and not in_quotes:
+                if current_token:
+                    tokens.append(current_token)
+                    current_token = ''
+            else:
+                current_token += char
+        if current_token:
+            tokens.append(current_token)
+        return tokens
+
+    def execute_instruction(self, instruction: str, line_num):
+        tokens = self.parse_tokens(instruction)
+        if not tokens:
+            return
+        cmd = tokens[0].lower()
+        in_loop_skip = any(skip for skip in self.loop_stack if skip.get('skip', False))
+        in_judgment_skip = any(skip for skip in self.judgment_stack if skip.get('skip', False))
+        if in_loop_skip or in_judgment_skip:
+            if cmd in ['loop end', 'judgment end', 'break']:
+                if cmd == 'loop end':
+                    loop_info = self.loop_stack.pop()
+                    if loop_info.get('skip', False):
+                        for code_line in loop_info['body']:
+                            self.execute_line(code_line, line_num)
+                elif cmd == 'judgment end':
+                    self.judgment_stack.pop()
+                elif cmd == 'break':
+                    while self.loop_stack:
+                        self.loop_stack.pop()
+            return
+        if cmd == 'init':
+            if len(tokens) >= 2 and tokens[1] == 'honeycomb':
+                self.honeycomb_stack = [{'type': 'queen bee', 'value': None}]
+                self.queen_bee = self.honeycomb_stack[-1]
+            else:
+                self.error_with_details(['init 后面必须跟 honeycomb'], operation = instruction)
+        elif cmd == 'call':
+            if not self.honeycomb_stack:
+                self.error_with_details(
+                    [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                    operation = instruction
+                )
+            item = self.honeycomb_stack[-1]
+            self.workspace_stack.append(item)
+            self.honeycomb_stack.pop()
+        elif cmd == 'lay':
+            if len(tokens) >= 2 and tokens[1] == 'egg':
+                if self.workspace_stack and self.workspace_stack[-1].get('type') == 'queen bee':
+                    self.honeycomb_stack.append({'type': 'egg', 'value': None})
+                else:
+                    self.error_with_details(
+                        ['工作区最后不是 queen bee，无法产卵！'],
+                        operation = instruction
+                    )
+            else:
+                self.error_with_details([f'未知的指令: {instruction}'], operation = instruction)
+        elif cmd == 'sleep':
+            if not self.honeycomb_stack:
+                self.error_with_details(
+                    [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                    operation = instruction
+                )
+            last_item = self.honeycomb_stack[-1]
+            if last_item['type'] == 'egg':
+                last_item['type'] = 'young bee'
+            elif last_item['type'] == 'young bee':
+                last_item['type'] = 'bee'
+            else:
+                self.error_with_details(
+                    ['只有 egg 或 young bee 可以 sleep！'],
+                    operation = instruction
+                )
+        elif cmd == 'set':
+            if len(tokens) >= 3 and tokens[1] == 'job':
+                if tokens[2:4] == ['worker', 'bee']:
+                    if not self.honeycomb_stack:
+                        self.error_with_details(
+                            [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                            operation = instruction
+                        )
+                    if self.honeycomb_stack[-1]['type'] in ['queen bee', 'worker bee', 'young bee', 'egg']:
+                        self.error_with_details(
+                            ['queen bee 、young bee、egg 或 worker bee 不能设置 job！'],
+                            operation = instruction
+                        )
+                    self.honeycomb_stack[-1]['type'] = 'worker bee'
+                elif tokens[2] == 'bee':
+                    pass
+                elif tokens[2:4] == ['queen', 'bee']:
+                    self.error_with_details(
+                        ['不能有多个 queen bee'],
+                        operation = instruction
+                    )
+                else:
+                    self.error_with_details([f'无效的 job: {tokens[2]}'], operation = instruction)
+            elif len(tokens) >= 3 and tokens[1] == 'value':
+                if not self.honeycomb_stack:
+                    self.error_with_details(
+                        [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                        operation = instruction
+                    )
+                if self.honeycomb_stack[-1]['type'] in ['queen bee', 'worker bee', 'egg', 'young bee']:
+                    self.error_with_details(
+                        ['queen bee、worker bee、egg、young bee 不能设置 value！'],
+                        operation = instruction
+                    )
+                value_token = tokens[2]
+                if value_token == 'input':
+                    input_string = input()
+                    if len(input_string) == 1:
+                        self.honeycomb_stack[-1]['value'] = input_string
+                    else:
+                        self.error_with_details([f'输入错误！value 必须是单个字符！'])
+                elif value_token.startswith("'") and value_token.endswith("'"):
+                    if len(value_token) != 3:
+                        self.error_with_details(['value 必须是单个字符！'], operation = instruction)
+                    char = value_token[1]
+                    self.honeycomb_stack[-1]['value'] = char
+                else:
+                    self.error_with_details([f'value 格式错误: {value_token}'], operation = instruction)
+            else:
+                self.error_with_details([f'set 后面必须跟 job 或 value'], operation = instruction)
+        elif cmd == 'output':
+            if not self.honeycomb_stack:
+                self.error_with_details(
+                    [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                    operation = instruction
+                )
+            last_item = self.honeycomb_stack[-1]
+            if last_item['value'] is not None:
+                print(last_item['value'], end = '')
+            else:
+                self.error_with_details(
+                    ['蜂巢最后一项没有 value，无法输出！'],
+                    operation = instruction
+                )
+
+        elif cmd == 'go':
+            if len(tokens) >= 2 and tokens[1] == 'back':
+                if self.workspace_stack:
+                    item = self.workspace_stack[-1]
+                    self.workspace_stack.pop()
+                    if item not in self.honeycomb_stack:
+                        self.honeycomb_stack.append(item)
+                else:
+                    self.error_with_details(
+                        ['工作区是空的，无法 go back！'],
+                        operation = instruction
+                    )
+            else:
+                self.error_with_details([f'未知的指令: {instruction}'], operation = instruction)
+        elif cmd == 'give':
+            if len(tokens) >= 2 and tokens[1] == 'up':
+                print('\\n程序结束。再见，愚蠢的人类！蜜蜂们要去采蜜了。')
+                sys.exit(1)
+            else:
+                self.error_with_details([f'未知的指令: {instruction}'], operation = instruction)
+        elif cmd == 'kill':
+            if not self.honeycomb_stack:
+                self.error_with_details(
+                    [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                    operation = instruction
+                )
+            last_item = self.honeycomb_stack.pop()
+            if last_item['type'] == 'queen bee':
+                self.error_with_details([
+                    '蜂后驾崩了！',
+                    '这就像你的代码生涯一样，尚未开始就已结束。'
+                ])
+        elif cmd == 'all':
+            if len(tokens) >= 2:
+                if tokens[1] == 'kill':
+                    if not self.honeycomb_stack:
+                        self.error_with_details(
+                            [f'蜂巢已经是空的！'],
+                            operation = instruction
+                        )
+                    for item in self.honeycomb_stack:
+                        if item['type'] == 'queen bee':
+                            self.error_with_details([
+                                '蜂后驾崩了！',
+                                '这就像你的代码生涯一样，尚未开始就已结束。'
+                            ])
+                    self.honeycomb_stack = []
+                elif tokens[1] == 'sleep':
+                    for item in self.honeycomb_stack:
+                        if item['type'] in ['egg', 'young bee']:
+                            item['type'] = 'young bee' if item['type'] == 'egg' else 'bee'
+                else:
+                    self.error_with_details([f'未知的指令: {instruction}'], operation = instruction)
+            else:
+                self.error_with_details([f'all 后面必须跟指令'], operation = instruction)
+        elif cmd in ['plus', 'reduce', 'ride', 'except']:
+            if not self.workspace_stack:
+                self.error_with_details(
+                    [f'工作区是空的！无法执行 “{instruction}” 操作！'],
+                    operation = instruction
+                )
+            if not self.honeycomb_stack or len(self.honeycomb_stack) < 2:
+                self.error_with_details(
+                    [f'蜂巢内至少需要2项才能进行运算！'],
+                    operation = instruction
+                )
+            last_workspace = self.workspace_stack[-1]
+            if last_workspace.get('type') == 'worker bee' and {'type': 'queen bee', 'value': None} in self.workspace_stack:
+                item1 = self.honeycomb_stack[-1]
+                item2 = self.honeycomb_stack[-2]
+                if item1['value'] is None or item2['value'] is None:
+                    self.error_with_details(
+                        ['操作数必须是数字！'],
+                        operation = instruction
+                    )
+                val1: int = 0
+                val2: int = 0
+                try:
+                    val1 = int(item1['value'])
+                    val2 = int(item2['value'])
+                except ValueError:
+                    self.error_with_details(
+                        ['操作数必须是有效的数字！'],
+                        operation = instruction
+                    )
+                result: int = 0
+                if cmd == 'plus':
+                    result = val1 + val2
+                elif cmd == 'reduce':
+                    result = val1 - val2
+                elif cmd == 'ride':
+                    result = val1 * val2
+                elif cmd == 'except':
+                    if val2 == 0:
+                        self.error_with_details(['除以零！你是想毁灭世界吗？'], operation = instruction)
+                    result = val1 // val2
+                self.honeycomb_stack.pop()
+                self.honeycomb_stack.pop()
+                self.honeycomb_stack.append({'type': 'bee', 'value': str(result)})
+            else:
+                self.error_with_details(
+                    ['工作区最后一项必须是 worker bee！工作区必须包含 queen bee！'],
+                    operation = instruction
+                )
+        elif cmd == 'loop':
+            if len(tokens) >= 2:
+                if tokens[1] == 'start':
+                    if not self.workspace_stack:
+                        self.error_with_details(
+                            [f'工作区是空的！无法执行 “{instruction}” 操作！'],
+                            operation = instruction
+                        )
+                    if self.workspace_stack[-1].get('type') != 'worker bee':
+                        self.error_with_details(
+                            ['工作区里最后一项必须是 worker bee 才能开始循环！'],
+                            operation = instruction
+                        )
+                    self.current_loop_body = []
+                    self.loop_stack.append({'body': [], 'skip': False})
+                elif tokens[1] == 'end':
+                    if not self.loop_stack:
+                        self.error_with_details(
+                            ['没有正在进行的循环！'],
+                            operation = instruction
+                        )
+                    loop_info = self.loop_stack.pop()
+                    loop_body = loop_info['body']
+                    loop_count = 0
+                    while True:
+                        should_break = False
+                        for code_line in loop_body:
+                            stripped = code_line.strip()
+                            if stripped.lower().startswith('plese '):
+                                plese_content = stripped[6:]
+                                self.execute_instruction(plese_content, line_num)
+                            else:
+                                self.execute_instruction(stripped, line_num)
+                            if self.loop_stack and self.loop_stack[-1].get('skip', False):
+                                self.loop_stack[-1]['skip'] = False
+                                should_break = True
+                                break
+                        if should_break:
+                            break
+                        loop_count += 1
+                else:
+                    self.error_with_details([f'未知的 loop 指令: {tokens[1]}'], operation = instruction)
+            else:
+                self.error_with_details(['loop 后面必须跟 start 或 end'], operation = instruction)
+        elif cmd == 'judgment':
+            if len(tokens) >= 2:
+                if tokens[1] == 'start':
+                    if not self.workspace_stack:
+                        self.error_with_details(
+                            [f'工作区是空的！无法执行 “{instruction}” 操作！'],
+                            operation = instruction
+                        )
+                    if self.workspace_stack[-1].get('type') != 'worker bee':
+                        self.error_with_details(
+                            ['工作区里最后一项必须是 worker bee 才能开始判断！'],
+                            operation = instruction
+                        )
+                    if not self.honeycomb_stack:
+                        self.error_with_details(
+                            [f'蜂巢是空的！无法执行 “{instruction}” 操作！'],
+                            operation = instruction
+                        )
+                    last_item = self.honeycomb_stack[-1]
+                    if last_item['value'] is None:
+                        judgment_result = False
+                    else:
+                        judgment_result = bool(int(last_item['value']))
+                    self.judgment_stack.append({'skip': not judgment_result})
+                elif tokens[1] == 'end':
+                    if not self.judgment_stack:
+                        self.error_with_details(
+                            ['没有正在进行的判断！'],
+                            operation = instruction
+                        )
+                    self.judgment_stack.pop()
+                else:
+                    self.error_with_details([f'未知的 judgment 指令: {tokens[1]}'], operation = instruction)
+            else:
+                self.error_with_details(['judgment 后面必须跟 start 或 end'], operation = instruction)
+        elif cmd == 'break':
+            if self.loop_stack:
+                self.loop_stack[-1]['skip'] = True
+            else:
+                self.error_with_details(
+                    ['没有正在进行的循环！'],
+                    operation = instruction
+                )
+        elif cmd == 'error':
+            error_list = []
+            for bee in self.honeycomb_stack:
+                if bee['value'] != 'None':
+                    error_list.append(bee['value'])
+                else:
+                    self.error_with_details('蜂巢内有的蜂蜜没有值，无法报错')
+            error([''.join(error_list), '这是你要求的！'])
+        else:
+            if self.loop_stack:
+                if not instruction.lower().startswith('plese'):
+                    self.loop_stack[-1]['body'].append(instruction)
+            else:
+                self.error_with_details(
+                    [f'未知的命令: “{instruction}”'],
+                    operation = instruction
+                )
+
+def main():
+    if len(sys.argv) < 2:
+        error(['错误: 没有填入参数', '请使用: python New_Bee_Lang.py <file_name>', '示例: python New_Bee_Lang.py hello_world.nbl'])
+    file_path = sys.argv[1]
+    try:
+        with open(file_path, 'r', encoding = 'utf-8') as file:
+            code = file.read()
+    except FileNotFoundError:
+        code = ''
+        error([f'文件 <{file_path}> 不存在', '蜜蜂们找不到你的代码文件！', '读取文件失败，蜜蜂们表示同情（并没有）'])
+    except Exception:
+        code = ''
+        error(['读取文件失败，蜜蜂们表示同情（并没有）'])
+    interpreter = new_bee_lang_interpreter()
+    print('New Bee Lang 解释器正在运行...')
+    print('祝你“好运”！\\n')
+    interpreter.execute(code)
+
+if __name__ == '__main__':
+    main()`;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'New_Bee_Lang.py';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        function downloadExample() {
+            const content = `hello New Bee Lang # 必须问候
+init  honeycomb # 必须初始化，这一步完后的蜂巢 [<queen bee>]
+plese call # 把栈最后一项召唤到工作区(另一个栈) 蜂巢 [] 工作区 [<queen bee>]
+plese lay egg # 如果工作区最后的是 queen bee，则往蜂巢内加入 egg
+sleep # 蜂巢最后的睡觉 (egg -> young bee)
+sleep # (young bee -> bee)
+set job bee # 设置蜂巢最后的职业: 普通蜜蜂 (这一步可以不加，栈后的已经是 <bee> 了)
+set value 'H' # 设置蜂巢最后的值 [character] H (工蜂、蜂后不能 set)
+plese output # 输出蜂巢最后的值
+set value 'e'
+output
+plese set value 'l'
+plese output
+output
+plese set value 'o'
+plese
+output
+plese set value ' '
+output
+plese
+set value 'W'
+plese output
+plese
+set value 'o'
+plese output
+set value 'r'
+plese
+plese output
+set value 'l'
+plese output
+set value 'd'
+plese output
+go back # 让 queen bee 返回蜂巢
+goodbye New Bee Lang # 必须问候
+# 其他指令
+# kill 杀死蜂巢最后的蜜蜂 (如果是 queen bee，将蜂后驾崩的信息报错)
+# all kill 杀死所有蜂巢蜜蜂 (如果是 queen bee，将蜂后驾崩的信息报错)
+# all sleep 所有蜂巢内的蜜蜂睡觉
+# plus 如果工作区里最后一项是 worker bee，蜂巢最后2项相加，否则报错，如果工作区里有 queen bee，则往蜂巢内加入计算值，否则报错
+# reduce 类似 plus，相减
+# ride 乘
+# except 除
+# loop start 如果工作区里最后一项是 worker bee 开始循环，否则报错
+# loop end 如果工作区里最后一项是 worker bee 结束循环，否则报错
+# judgment start 如果工作区里最后一项是 worker bee，判断蜂巢最后是否为真，是，接着执行，否，接下来的代码跳过，直到这个判断的结束 judgment end
+# judgment end 结束判断
+# break 如果工作区里最后一项是 worker bee，结束循环
+# error [character] [character] [character] ... 如果工作区里最后一项是 worker bee，把参数(character，不是什么字符串，New Bee Lang 不支持字符串)输出，报错`;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'hello_world.nbl';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

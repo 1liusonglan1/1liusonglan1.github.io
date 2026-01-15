@@ -39,10 +39,125 @@
 
 ```文件结构
 squirrel-planet/
-├── index.html              # 源代码
-├── logo.png                # Logo
+├── dist/                    # 部署目录（上线用）
+│   ├── index.html          # 主页面
+│   └── logo.png            # Logo 图片
+├── index.html              # 开发版源代码
+├── logo.png                # 开发版 Logo
+├── test.js                 # Playwright 测试脚本
+├── package.json            # 项目配置
 └── README.md               # 说明文档
 ```
+
+## 🚀 部署指南
+
+### 方式一：简单部署（推荐）
+
+只需要 `dist/` 目录中的 2 个文件：
+
+```bash
+# 复制文件到服务器
+cp dist/* /var/www/html/
+```
+
+### 方式二：静态托管平台
+
+支持以下平台，直接上传 `dist/` 目录即可：
+
+- ✅ Vercel
+- ✅ Netlify
+- ✅ GitHub Pages
+- ✅ 阿里云 OSS
+- ✅ 腾讯云 COS
+- ✅ 任何 Web 服务器（Nginx/Apache）
+
+### 方式三：Vercel 快速部署
+
+```bash
+# 安装 Vercel CLI
+npm i -g vercel
+
+# 进入部署目录
+cd dist
+
+# 部署
+vercel
+```
+
+## 🔧 自定义修改
+
+### 修改项目链接
+
+当您的项目准备好后，修改 `index.html` 中的项目按钮链接：
+
+```html
+<!-- 找到这两个按钮，修改 href 属性 -->
+<a href="https://your-tanex-script-url.com" class="project-btn">
+    访问项目 <span class="arrow">→</span>
+</a>
+
+<a href="https://your-new-bee-lang-url.com" class="project-btn">
+    访问项目 <span class="arrow">→</span>
+</a>
+```
+
+### 修改站点标题
+
+```html
+<!-- 在 index.html 中搜索并修改 -->
+<title>松鼠星球 | 代码与艺术缠绕的魔法秘境</title>
+```
+
+### 修改品牌文字
+
+```html
+<!-- 导航栏品牌 -->
+<div class="nav-logo">
+    <img src="logo.png" alt="松鼠星球 Logo">
+    <span>松鼠星球</span>
+</div>
+
+<!-- 页脚品牌 -->
+<div class="footer-logo">
+    <img src="logo.png" alt="松鼠星球 Logo">
+    <span>松鼠星球</span>
+</div>
+```
+
+### 修改配色方案
+
+在 CSS 顶部 `:root` 变量中修改：
+
+```css
+:root {
+    --orange-primary: #FF8C00;    /* 主橙色 */
+    --orange-light: #FFA500;      /* 浅橙色 */
+    --orange-dark: #FF6B00;       /* 深橙色 */
+    --orange-glow: #FFB347;       /* 发光色 */
+    --bg-dark: #0D1117;           /* 背景色 */
+    --bg-card: #161B22;           /* 卡片背景 */
+    --text-light: #F0F6FC;        /* 文字色 */
+    --text-dim: #8B949E;          /* 次要文字 */
+    --code-green: #00FF9D;        /* 代码绿色 */
+    --accent-purple: #A855F7;     /* 紫色点缀 */
+    --accent-pink: #EC4899;       /* 粉色点缀 */
+}
+```
+
+### 添加/删除页面区块
+
+注释掉的代码示例（团队成员区块）：
+
+```html
+<!-- Team Section - Disabled -->
+<!--
+<section class="team-section" id="team">
+    ...
+</section>
+-->
+```
+
+如需启用，取消注释即可。
 
 ## 📦 技术栈
 
@@ -50,6 +165,7 @@ squirrel-planet/
 - **CSS3** - 样式与动画（无外部 CSS 框架）
 - **JavaScript** - 交互功能
 - **FontSource** - 思源黑体、站酷酷黑体
+- **Playwright** - 测试框架
 
 ### 使用字体
 
@@ -57,6 +173,24 @@ squirrel-planet/
 - **站酷酷黑体 (ZCOOL QingKe HuangYou)** - 展示标题
 
 字体通过 jsDelivr CDN 加载，国内可正常访问。
+
+## 🧪 测试
+
+项目包含 Playwright 测试脚本：
+
+```bash
+# 运行测试
+cd squirrel-planet
+node test.js
+```
+
+测试内容包括：
+
+- 页面加载验证
+- 关键元素检查
+- 按钮交互测试
+- CSS 动画验证
+- 控制台错误检测
 
 ## 🎨 资源引用
 
