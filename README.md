@@ -39,9 +39,6 @@
 
 ```文件结构
 squirrel-planet/
-├── dist/                    # 部署目录（上线用）
-│   ├── index.html          # 主页面
-│   └── logo.png            # Logo 图片
 ├── index.html              # 开发版源代码
 ├── logo.png                # 开发版 Logo
 ├── test.js                 # Playwright 测试脚本
