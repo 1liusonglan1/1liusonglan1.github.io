@@ -35,17 +35,6 @@
 5. **项目展示** - Tanex Script、New Bee Lang 项目入口
 6. **页脚** - 品牌信息、导航链接
 
-## 📁 文件结构
-
-```文件结构
-squirrel-planet/
-├── index.html              # 开发版源代码
-├── logo.png                # 开发版 Logo
-├── test.js                 # Playwright 测试脚本
-├── package.json            # 项目配置
-└── README.md               # 说明文档
-```
-
 ## 📦 技术栈
 
 - **HTML5** - 结构标记
@@ -53,13 +42,6 @@ squirrel-planet/
 - **JavaScript** - 交互功能
 - **FontSource** - 思源黑体、站酷酷黑体
 - **Playwright** - 测试框架
-
-### 使用字体
-
-- **思源黑体 (Noto Sans SC)** - 正文字体
-- **站酷酷黑体 (ZCOOL QingKe HuangYou)** - 展示标题
-
-字体通过 jsDelivr CDN 加载，国内可正常访问。
 
 ## 🧪 测试
 
